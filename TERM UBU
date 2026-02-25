@@ -1,0 +1,9 @@
+ps 
+ps -a
+ps a
+ps -u
+ps u
+ps -x
+ps x
+ps aux
+ps -aux
