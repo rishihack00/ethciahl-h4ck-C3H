@@ -1,0 +1,24 @@
+termux prompts ... 
+
+cd
+mv oldname newname
+mv filename ~/folder name /
+ls
+ls -l( s3e in detail )
+
+-rw-r--r--
+│││ │ │
+│││ │ └─ others permissions
+│││ └── group permissions
+││└──── owner permissions
+└────── file type (- = file, d = directory)
+
+ls -a ( hidden files )
+cat
+touch
+nano
+pwd
+whoami
+mkdir
+rm ( file )
+rm -rf ( directory )
