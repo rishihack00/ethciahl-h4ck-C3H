@@ -1,0 +1,3621 @@
+ 
+		                        CEH [CERTIFIED ETHICAL HACKER] ( TRAINING )
+
+CEH CERTIFICATE TRAINING LINK : https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/
+
+
+HACKER KILL CHAIN TRAP 
+
+1. RECONAISSANCE ( INFORMATION GATHERING )
+
+--> ACTIVE RECONAISSANCE 
+
+--> PASSIVE RECONAISSANCE 
+
+2. PAYLOAD 
+
+3. DELIVERY
+
+4. EXPLOIT ( BY SEEING THE VULNERABILITY)
+
+5. INSTALLATION 
+
+6. COMMAND CONTROL ( BY OPENING LISTENER PORT )
+
+[ WITHOUT ERASING THE DIGITAL FOOTPRINTS , IT IS DANGER FOR THE HACKERS TO PROCEED ]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+CIA TRIAD
+                                                     C
+--> CONFIDENTIALITY               /\
+--> INTEGERITY                         /  \ 
+--> AVAILABILTY                       /    \
+                                                I ------ A
+                                
+ 
+[ In the CIA triad, integrity is the principle of ensuring that data is accurate, authentic, and trustworthy, and protected from unauthorized modification or deletion ]
+
+The opposite of CIA TRAID 
+
+DAD TRIAD
+                                  D
+--> DISCLOSURE                   /\
+--> ALTRATION                   /  \ 
+--> DENIAL                     /    \
+                             A ------ D
+
+            
+
+
+MFI is nothing but the 2 factor authentication 
+
+--> Data kept behind lot of security leads to the loss of availability.. best way is to keep a strong password and an MFI.
+
+THREE TYPES OF BACKUP 
+
+--> HARD BACKUP 
+--> COLD BACKUP 
+--> INCREMENTAL BACKUP 
+
+BACKUP ARE LIMITED FOR AVAILABILTY 
+
+FOR SOLVING THIS ISSUES ( WE CAN USE THE METHOD OF HIGH AVAILABILTY [ H A ] )
+
+[[ WHERE WE KEEP A CLUSTER AND LOAD BALANCER WHERE FEW NODES RUNS , IF ONE SERVER CRASHES THE REST OF THE SERVERS CAN STILL BE USED BY THE CUSTOMER ]]
+
+There is another method of solving this availability problem where we use two servers which are known as PRIMARY and STANDBY , if primary server is down the stand by server serves as the primary server... 
+
+THERE ARE TWO DIVISION ARCHITECUTURE 
+
+--> ACTIVE ACTIVE 
+
+--> ACTIVE PASSIVE
+
+
+ACTIVE ACTIVE --> There are two servers that runs where the the customer can access both the servers and if one is down the other backs it up ...
+
+ACTIVE PASSIVE --> It is similar to the ACTIVE ACTIVE Architecture but one of the server will not be active but it will be ready with holding all of the data , if the first server is down then the second server acts as active and that will provide the datas required to the customer..
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+IP ADDRESS ( IPV4 ) - 32 bits..
+
+( IT FOLLOWS OCTET RULE )
+
+IP ADDRESS are created and maintained by IANA ( Internet Assigned Numbers Authority )  
+
+--> IP ADDRESS ranges starts from 0.0.0.0 to 255.255.255.255 .. 
+
+There are few classes based on these ranges 
+
+1. CLASS A - (0 - 127) { BIG ORGANISATION }                                     
+
+2. CLASS B - (128 - 191) { MIDDLE LEVEL }   
+
+3. CLASS C - (192 - 223) { OUR HOUSE DEVICES }  
+
+4. CLASS D - (224 - 229) ]---  }
+
+				THESE BOTH ARE FOR ARMY AND FUTURE USES
+
+5. CLASS E - (240 - 255) ]---  } 
+
+
+IP ADDRESS GIVEN TO THE ROUTER IS A PUBLIC IP ADDRESS ..
+
+This router assigns a PRIVATE IP ADDRESS for the devices which are connected in the router..
+
+THE ROUTER IS DOING THIS PROCESS WITH THE HELP OF
+ DHCP (DYNAMIC HOST CONFIGURATION PROTOCOL )
+
+------------------------->
+
+CONNECTING A DEVICE TO THE ROUTER PROCESS 
+
+First if we have to connect a device on the router , our device MAC ADDRESS ( An address which is permanent address of your particular device and there is no identical MAC ADDRESS WILL BE FOUND IN THE WORLD )...
+
+Once the MAC ADDRESS is received by the DHCP i.e router, it gives that particular device a private ip address...
+
+If a msg or some data is been sent by a particular device from ur house to someone else , it will not be sent by the name of ur private ip address ,, it will sent by the public ip address ...
+
+{ IT WORKS SIMILARILY LIKE A POST OFFICE }
+
+We wont have a duplicate private ip address inside ur LAN NETWORK but if u consider world as an example then the answer is YES !!!.. In the entire world we will have duplicate private ip address similar to ur private ip address .. 
+
+But the thing is private ip address cannot cross its own LAN NETWORK ...
+
+NAT ( NETWORK ADDRESS TRANSLATION ) IS A PROCESS OF CHANGING THE SOURCE AND DESTINATION IP ADDRESS AND PORTS , ADDRESS TRANSLATION REDUCES THE NEED FOR IPV4 PUBLIC ADDRESSES AND HIDES PRIVATE NETWORK ADDRESS RANGES . THIS PROCESS IS USUALLY DONE BY ROUTERS OR FIREWALLS..   
+
+----------------
+
+
+++---127.0.0.1---++ 
+
+A LOOPBACK ADDRESS HAS BEEN BUILT INTO THE IP DOMAIN SYSTEM IN ORDER TO ALLOW FOR A DEVICE TO SEND AND RECIEVE ITS OWN DATA PACKETS IN IPV4,127.0.0.1 IS THE MOST COMMONLY USED LOOPBACK ADDRESS, HOWEVER THIS CAN RANGE BE EXTENDED TO 127.255.255.255.
+
+-- > loopback address is used to check or trouble the network stack without entering into the network 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🔹 What is a Network Stack?
+A network stack is a collection of software components that work together to handle network communication between devices. It is responsible for sending, receiving, and processing data over a network.
+
+Think of it like a layered system in One Piece:
+
+Just like how a pirate crew has different roles (navigator, cook, swordsman, etc.), the network stack has layers, each handling specific tasks.
+The lower layers handle physical connections (like cables or Wi-Fi), while the higher layers deal with applications (like web browsers or online games).
+🔹 How Does a Network Stack Work?
+A network stack follows the OSI (Open Systems Interconnection) Model or the TCP/IP Model, which breaks communication into layers:
+
+📌 TCP/IP Model (Used in Real Networks)
+
+Layer			Function									Example
+
+Application Layer	Handles user applications (e.g., web browsing, email)	HTTP, FTP, DNS
+
+Transport Layer	Manages reliable data delivery	TCP, UDP ( User datagram protocol )
+
+Internet Layer	Routes data between networks				IP (IPv4, IPv6)
+
+Network Access Layer	Deals with physical transmission	Ethernet, Wi-Fi
+
+🔹 Breakdown of Each Layer
+
+
+1️⃣ Application Layer (Top-most)
+
+Handles network-related applications like web browsers, email clients, and messaging apps.
+Uses protocols like HTTP, FTP, SMTP, DNS.
+Example: When you open https://google.com, your browser uses the HTTP protocol.
+
+2️⃣ Transport Layer
+
+Ensures reliable or fast delivery of data.
+Uses TCP (reliable, ordered) and UDP (fast, no guarantee).
+Example: Watching a YouTube video uses UDP (faster), while downloading a file uses TCP (reliable).
+
+3️⃣ Internet Layer
+
+Routes data across networks using IP addresses.
+Uses IP (Internet Protocol) for addressing and routing.
+Example: When you send a request to Google, it finds the fastest route using IP.
+
+4️⃣ Network Access Layer (Lowest Layer)
+
+Handles the physical connection (Wi-Fi, Ethernet, mobile data).
+Uses MAC addresses for local communication.
+Example: Your laptop sends data over Wi-Fi to reach your router.
+ 
+🔹 Why is the Network Stack Important?
+✅ Enables Internet Communication – Without a network stack, your computer can’t send or receive data.
+✅ Handles Errors and Retries – Ensures lost packets are resent and received in the correct order (via TCP).
+✅ Supports Multiple Protocols – Allows web browsing (HTTP), file downloads (FTP), and video calls (WebRTC) to work together.
+✅ Optimizes Performance – Routes traffic efficiently to minimize lag and data loss.
+
+🔹 Example: Sending a Message on WhatsApp
+1️⃣ Application Layer – WhatsApp formats the message.
+2️⃣ Transport Layer – Uses TCP/UDP to ensure message delivery.
+3️⃣ Internet Layer – Finds the fastest route using IP addresses.
+4️⃣ Network Access Layer – Sends data over Wi-Fi or mobile data.
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------
+
+RANGES OF PRIVATE IP (WRT) CLASSES
+
+CLASS A 
+PRIVATE IP ADDRESS [ 10.0.0.0 - 10.255.255.255 ]
+
+CLASS B 
+PRIVATE IP ADDRESS [ 172.16.0.0 - 172.31.255.255 ]
+
+THERE WERE TOTALLY 4.2 MILLION IP ADDRESS CREATED 
+
+
+STATIC IP : A PARTICULAR IP ADDRESS CAN BE TAKEN BY THE CLIENT FOR HIS/HER ROUTER { JUST LIKE GETTING A FANCY NUMBER FOR THE CAR
+
+DYNAMIC IP : IP ADDRESS IS NOT FIXED AND IT CHANGES ONCE THE ROUTER IS CHANGED...
+
+
+--> IN THE YEAR 2011 IPV4 ADDRESSES CAN NO LONGER BE USED HENCE THEY STARTED TO USE IPV6 ADDRESSES.. <--
+
+IPV6 is the next generation Internet Protocol (IP) standard intended to eventually replace IPv4..
+
+IPV4 ( 32 BIT )
+IPV6 ( 128 BIT )
+----------------------------
+
+
+
+IPV4 /// IPV6 
+--------------
+
+IPV4 :
+
+--32 BIT 
+
+---4.3 BILLION ADDRS
+
+---ADDRS must be reused and masked 
+
+---Numeric dot-decimal notation ( 192.168.5.18 )
+
+---DHCP or manual configuration ( dynamic host config protocol )
+
+IPV6 :
+
+128 BIT IP ADDRS
+
+7.9 x 10^28 addrs 
+
+
+MAC ADDRESS 
+
+Every device can have unique addresses
+
+Alphanumeric hexadecimal notation 
+50b2:6400:0000:0000:6c3a:b17d:0000:10a9
+(Simpified - 50b2:6400::6c3a:b17d:0:10a9
+
+Supports autoconfiguration 
+
+
+TO CHECK WETHER UR IP ADDRESS HAS UNDERGONE ANY MALICIOUS ACTIVITY U CAN JUST DROP UR IP ADDRESS ON A WEBSEITE CALLED 
+
+(( VIRUS TOTAL ))
+
+IF ANY BAD REPUTATION THEN UR IP ADDRESS IS IN DANGER 
+
+
+
+Practical Scenarios:
+Home Network:
+
+Typical IP range: 192.168.1.0/24 (254 devices max).
+Usually, no more than 20–50 devices (smartphones, PCs, IoT, etc.).
+Small Business Network:
+
+IP range: 192.168.0.0/23 (510 usable IPs).
+Supports more devices like employees' PCs, phones, printers, servers.
+Enterprise Network:
+
+IP range: 10.0.0.0/16 (65,534 usable IPs).
+Used for thousands of devices across multiple departments or offices.
+
+--------------------------------------------------------------------------
+
+				SUBNET MASK
+-->
+A subnet mask is a 32-bit binary number that identifies the network and host parts of an IP address
+-->
+
+CLASS A    NETWORK    HOST  HOST  HOST 
+	                255       		0     	  0         0
+
+CLASS B    NETWORK    NETWORK  HOST  HOST 
+	                 255      	    255      		0          0                               255.255.255.0
+
+CLASS C    NETWORK    HOST  HOST  HOST 
+	     		255      	255  		 255     0
+
+
+[ number of host can be connected in each class ]
+
+For these IP ADRS there are binary values converted when it is going in to the computer 
+
+FOR EXAMPLE : 192.168.1.0
+
+we find the binary value using the bit octet ...
+
+128 64 32 16 8 4 2 1
+
+so the process of finding the binary value for the example ip addrs is >...
+
+we need to check by adding the numbers in octet we need to get 192 and then the process goes on for 168 and then 1 and finally 0 ...
+
+So here the IP ADDRS binary value is ... 192.168.1.0 (binaey value )
+
+11000000.10101000.00000001.00000000
+
+So the same process is done to find a subnet mask binary value ..
+
+EXAMPLE : 255.255.255.0
+
+the binary value of this subnet mask is 
+
+11111111.11111111.11111111.00000000
+
+So now, in this we can find how much hosts we can connect coz we already know what is the location of the network..
+
+TO FIND THE NUMBER OF HOSTS TO BE CONNECTED THERE IS A FORMULA 
+
+
+		        --------
+			|2^n-2 |
+			--------
+
+n is the number of bits allocated for the hosts ..
+
+SO CALCULATION :
+
+n = 8 ;
+
+2^8-2 = 256 - 2 => 254 [ THESE MANY DEVICES CAN BE CONNECTED ]
+
+Now there is a requirement of connecting more than 254 devices then there is a way if we convert a 1 to 0 from the previous octet of 255
+
+11111111.11111111.1111111.0000000 
+
+n= 9 ;
+
+2^9-2 = 510 [these many devices can be connected]
+
+--> Once we reach the maximum amount of devices connected in the subnet mask , and if we require to addd more number devices exceeding the limit , then we use this concept of VLSM = Variable Length Subnet Masking....
+--------------------------------------------------------------------------
+
+
+
+				OSI LAYER MODEL [ OPEN SYSTEM INTERCONNECTED ]
+
+
+There are 7 layers in this model they are >>..		
+							RECIEVER
+--> APPLICATION LAYER   }			|           ^
+--> PRESENTATION LAYER  }--> SOFTWARE LAYERS 	|    	    |
+--> SESSION LAYER       }			|	    |
+						V           |
+--> TRANSPORT LAYER  } --> HEART OF OSI  SENDER
+
+--> NETWORK LAYER     }
+--> DATA LINK LAYER   }--> HARDWARE LAYERS 
+--> PHYSICAL LAYER    }
+
+[[[Way of remembering the osi model 
+
+ALL PEOPLE SUFFER TO NAIL DANGER PROBLEMS]]]
+
+--------------------------------------------------------------------------
+
+EXAMPLE : TAKE WHATSAPP AND TEXT >...
+
+APPLICATION LAYER :->
+
+Opening the app and texting "HI EREN "..
+
+now this moves to the PRESENTATION LAYER 
+
+PRESENTATION LAYER:->
+
+This layer takes care of the encryption part and does not allow any one to see the message because it is encrypted ..
+
+END TO END ENCRYPTION 
+
+now this moves to the SESSION LAYER 
+
+SESSION LAYER :->
+
+this layer will maintain the session between u and the second person who u r chatting with ..
+
+SESSION ESTABLISHED 
+
+now this moves to the TRANSPORT LAYER  
+
+TRANSPORT LAYER :->
+
+There are protocols used in this layer , usually we use TCP ( Transfer control protocol ).. but we are using a more powerful protocol which is 
+f
+[[[
+
+XMPP ::--->.
+
+WHATSAPP USES EXTENSIBLE MESSAGING AND PRESENCE PROTOCOL (XMPP) TO EXCHANGE DATA BETWEEN THE USERS. THE PROTOCOL IS DECENTRALIZED SECURE , AND FLEXIBLE , IT CAN BE USED TO TRANSFER MESSAGES BOTH IN ONE-ON-ONE AND IN GROUP CHATS..
+
+]]]
+
+This helps to divide to 20 segments and then there will be sequence number written from (1 to 20 );
+
+now this moves to the NETWORK LAYER..
+
+NETWORK LAYER :->
+
+This layer helps for IP labelling [ Where ip header are labelled hear {
+the public ip address and the location of the receiver is marked here }
+
+In this segment it will encapsulate into packets and change into packets formate
+
+now this moves to the DATA LINK LAYER ..
+
+DATA LINK LAYER :->
+
+This layer will encapsulate the packets and covert it into frames and then they will stamp our MAC ADDRESS and push it to the next layer...
+
+now this moves to the PHYSICAL LAYER...
+
+PHYSICAL LAYER :->
+
+In this layer all the data is been transferred to the second person through electric signals ...
+
+COMPLETELY ALL THIS IS FROM SENDER SIDE 
+
+The same process takes place in the receiver side but in the reverse direction ...
+
+
+[[[[[ OSI LAYER MODEL MIXED WITH CYBER SECURITY ]]]]
+
+PHYSICAL LAYER - LOCKS , CCTV CAMERA , PHYSICAL CONTROLS 
+
+DATA LINK LAYER - SWITCH SECURITY , VLAN SEGMENTATION 
+
+----------------------------------------------------------
+
+((( Switch security protects networks from unauthorized access and attacks by implementing a variety of measures))), including:
+
+Port security: Prevents unauthorized devices from connecting to the network by enabling specific commands on switch ports 
+
+DHCP snooping: Ensures that only authorized DHCP servers can assign IP addresses to devices on the network 
+
+VLANs: Segments network traffic to isolate different groups of devices 
+
+Firmware updates: Fixes bugs, improves performance, and patches vulnerabilities 
+
+Network traffic monitoring: Detects and analyzes suspicious or malicious activities 
+
+MAC address filtering: Whitelists or blacklists approved or denied MAC addresses 
+
+==========================================>>>>>>>>>>>
+VLAN segmentation, or virtual local area network segmentation, is a network segmentation technique that divides a large network into smaller, isolated networks: 
+
+--------------------------------------------------------------
+
+NETWORK LAYER - IP SECURITY , FIRE WALL 
+
+{{
+
+IP security, or Internet Protocol Security, is a set of protocols that secure connections between devices over a network. It's a critical framework for ensuring that data is exchanged securely, especially when it's traveling over potentially insecure networks like the internet. 
+ 
+}}
+
+TRANSPORT LAYER - TCP SECURITY , HTTPS/SSL/TLS
+
+SESSION LAYER - SESSION MANAGEMENT ( SESSION TIMEOUT )
+
+PRESENTATION LAYER - DATA MASKING , ENCRYPTION 
+
+APPLICATION - WEB APPLICATION FIRE WALL ( WAF ) , API SECURITY , IAM SEGMENTATION , ROLL BASED ACCESS, AUTHENTICATION , AAA
+
+-------------------------------------------------------------------------->>>>>>>>>>>>>>>>>>>
+
+
+				KALI LINUX 
+
+ BASIC COMMANDS :->
+
+--> sudo apt update ( for updating) ( APT - ADVANCED PACKAGING TOOL )
+
+--> sudo apt upgrade ( for upgrading )
+
+--> sudo dpkg -i ( file ) -- ( to download the Debian file in the Linux 
+
+machine  [[[ I - INSTALL ]]]
+
+--> init 0 ( shutting down the vm box )
+
+--> pwd (Present working directory) [ the directory what ur working in the present ]
+
+--> ls -ltr [ ls = list , -ltr means it creates a table format which includes the time date of all the folders ]
+
+--> ls -a [ seeing the hiding files ]
+
+--> clear ( to clear the screen )
+
+--> touch eren ( to create a file named "" eren "" )
+
+--> touch -d tomorrow eren.txt [ creating and saving the text file for the future ]
+
+--> echo ( this command helps to print what was written in the echo command )
+
+--> echo "hi" > eren.txt ( it is an easy way to add text on a existing file )
+
+--> rm eren ( to remove the file eren )
+
+--> cd ( to enter into any directory of Linux )
+
+--> mkdir ( to create directory ( i.e FOLDER ) )
+
+--> rmdir ( to remove only the empty directory )
+
+[[[[
+
+You can add the -r option to remove a folder and its contents, including subdirectories. Use the -i flag to display a confirmation message before the removal or -f to deactivate it completely.
+
+]]
+
+--> vim eren ( just like a notepad , we edit and write ) [[ NOT WORKING FOR ME ]]
+
+--> nano eren ( we can write or edit the context ) [ WORKING ]
+
+--> cat eren ( we use it to see what text is wriiten in that file )
+
+--> cp ( to copy the file from one directory to the other directory )
+
+			syntax:	cp file1 file2 [target_path]
+
+Example:
+
+cp cd /home/kali/eres [ by doing this we can easily copy the cd file to the eres directory ]
+
+--> mv ( to move the file to another location and it can also rename the file to new name)
+
+Example:
+
+mv cd tom [[  means tom is the new file name for cd  ]]
+
+--> file ( this tells us which type of file is stored in that particular directory ) [[ file eren ]] == ASCII TEXT 
+
+--> zip file.zip filename ( creates a zip file)
+
+--> unzip file.zip ( once clicking enter it shows some options click on rename and rename the file so the zip gets extracted to the renamed file ) 
+
+
+--> sudo su ( switching to root user )
+
+--> whoami( this helps to identify u )
+
+--> sudo passwd 
+
+--> man [ it is a command which gives us a good manual p ]
+
+--> whatis [ helps to make the user understand teh purpose of the  tools used ]]
+
+--> cmp file 1 file 2 [ used to compare the files  ]]
+
+--> diff file 1 file 2 [ for clear differentiation this command is used ]
+
+--> sort ( this command helps in sorting things as we are desired )
+
+--> find ( this command is used to fidn things inside the directory )
+
+--> sudo find , -type f -name ".*" ( we use this command to find the hidden files )
+
+--> find . -type f -empty ( we use this command to find the empty directories 
+
+--> find . -perm /a=x  ( we use this command to find the executable files 
+
+--> chmod +x ( chmod = "CHANGING MODE " + x helps to generate an executable file )
+
+--> chown user file name [SYNTAX]  ( "chown = "CHANGE OWNERSHIP" ( you can give a user an ownership of a file ;;))
+
+--> grep ( command is used for picking a particular data from the ip address info s)
+
+( EXAMPLE :
+
+ip add | grep eth0 - this picks eth0 data and show us)
+
+--> awk
+
+( ip add | grep eth0 | grep inet | awk '{print $2}' - command )
+
+--> cat /etc/resolv.conf ( to find the dns( DOMAIN NAME SYSTEM ) { IF U THINK THSI IS NOT INFORMATIVE THEN TRY THIS COMMAND BELOW )
+
+--> resolvectl status ( good and very informative compared to the previous
+
+--> ping ( this command is used to just check wether ur website is working or not )
+
+--> ping -c 3 ( link of the website ) [[ ( -c 3 ) --> this mentions the count of packets sent to ur website ]]
+
+--> ping -c 3 -s 300 ( link of the website ) [[ (-s 300 ) --> this mentions the size of the packet.
+
+--> traceroute ( this command tells from which path are u accessing a particular website 
+
+--> netstat or netstat -tulpn ( for checking how many ports are open 
+on our machine 
+
+--> ss or ss -tulpn ( same thing but for our current generation )
+
+-->sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT ( to examine ur firewall are things getting through or not )
+
+--> ufw ( same thing like what it did on the previous command )
+
+{{    line of commands to use ufw 
+
+
+!! sudo ufw allow 80 
+
+!! sudo ufw status
+
+!! sudo ufw enable 
+
+}}
+
+--> uname or uname -a( tells about ur system )
+
+--> try neofetch which gives cool results 
+
+--> cal ( for a calender )
+
+--> echo "1+2" | bc ( used to do some calculations )
+
+--> free ( checkout the memory that is available in ur system )
+
+--> df  or df -H ( to check the disk space )
+
+--> ps or ps -aux ( to check the processor )
+
+--> top or htop  ( check the processor eating ur data)
+
+--> ps -aux | grep thisbash.sh ( to kill a processor )
+
+--> kill -9  and then the ( process id ) [ to force kill it )
+
+--> pkill -f thisisbash ( without process id killing it )
+
+--> systemctl stop start apache2 ( for stopping and starting the command )
+
+--> systemctl status apache2 ( to check the status )
+
+--> systemctl reststart apache2 ( to restart )
+
+--> history ( to check what are all the commands u typed in the terminal)
+
+--> sudo reboot ( reboot the sys)
+
+--> sudo shutdown ( in 1 min ) 
+
+--> sudo shutdown -h now ( it shutdown immediately )
+
+	
+KALI LINUX TOOLS 
+
+------------------
+N - M A P 
+------------------
+
+--> This tool is used for scanning the ip address and finding the vulnerabilities ..
+[[[ 
+
+BEFORE HACKING ANY SYSTEM WE NEED THREE IMPORTANT THINGS
+
+--!> IP ADDRESS (OR) HOST NAME
+
+--!> PORT NUMBER
+
+--!> SERVICE NAME ( OR ) SID
+
+PORT :
+
+This start and end point of a travel of data inside and outside 
+
+
+--> This port ranges from o to 65535
+
+RANGES          PORTS
+
+0-1023		WELL KNOW PORTS 
+
+EXAPLES OF WELL KNOWN PORTS :
+
+--> PORT 20 : FTP data transfer
+
+--> PORT 21 : FTP control
+
+--> PORT 22 : SSH
+
+--> PORT 25 : SMPTP( EMAIL )
+
+--> PORT 53 : DNS
+
+--> PORT 80 : HTTP
+
+--> PORT 443 : HTTPS 
+ 
+1024 - 49151	REGISTERED PORTS
+
+49152 - 65535	DYNAMIC PORTS
+ 
+
+
+----------------------------------------------------------------------
+-->> PHYSICAL PORTS 
+----------=======================-----------------------------
+
+
+THREE IMPORTANT TOOLS FOR SCANNING ( WEBSITES , DBS, ETC )
+
+--> ANGRY IP SCANNER 
+
+--> NETDISCOVER
+
+--> NMAP 
+
+
+WHAT IS PROTOCOL ????
+
+--> A protocol is a ser of rules and guidelines for communicating data between computers or networks . Protocols define how data is sent and received , and networks must follow these rules to transmit data successfully...
+
+
+THE THING WHAT WE ARE GOING TO PERFORM IS LIVE HOST IDENTIFICATION SCAN
+ ----------------------------------------------------------------------
+
+THERE ARE TWO PROTOCOLS WE ARE GOING TO USE 
+
+--> ICMP 
+
+--> ARP 
+
+
+ICMP 
+----
+
+
+ICMP ( INTERNET CONTROL MESSAGING PROTOCOL )
+
+This is primarily used for network diagnostics and error reporting , allowing devices to communicate issues with data transmission, most notably with "ping" and "traceroute" to check connectivity and identify network problems by sending error messages back to the dource when data cannot reach its intended destination : essentially acting as a way to troubleshoot network issues by providing status updates on data transimission across the network..
+
+[[ IF THIS PACKET IS DELIVERED THEN WE CAN IDENTIFY THERE IS A SERVER PRESENT ]]]
+
+
+ARP ( ADDRESS RESOLUTION PROTOCOL )
+
+ARP (Address Resolution Protocol) is a network protocol used to map an IP address (Layer 3) to a MAC address (Layer 2) within a local area network (LAN). It enables devices on the same network to communicate by resolving IP addresses to physical hardware addresses.
+
+
+TCP && UDP 
+----------
+
+TCP 
+---
+
+--> CONNECTON ORIENTED PROTOCOL
+
+** IT IS VERY RELIABLE 
+
+** If there is a connection established by TCP then once the data is sent 
+receiver will send a signal or an acknowledgement to the sender then the connection gets terminated ...
+
+--> ITS SLOW 
+
+--> EXAMPLE : IMPORTANT COMMUNICATIONS WILL BE USED 
+
+
+UDP 
+---
+
+--> If once the data is sent it will not consider it wether it reaches or not but it will do its work ...
+
+--> ITS FAST 
+
+--> MULTIMEDIA FILES , AUDIO , VIDEO [[ IF ANY PACKETS ARE LOST IT JUST GET RESTRUCTURED IN THE DELIVERY SIDE ]]
+--------------------------------------
+
+TCP 3-WAY HANDSHAKE 
+
+This is the process to establish a connection between client and server..
+
+--! FIRST THE CLIENT WILL SEND "SYN"( SYNC ) FLAG TO THE SERVER ..
+
+--! THEN THE SERVER SENDS "SYN + ACK( ACKNOWLEDGEMENT )"FLAG TO THE SERVER..
+
+--! THEN THE CLIENT WILL RESPOND BY SENDING A "ACK" FLAG TO THE SERVER..
+
+
+THERE ARE THESE IMPORTANT FLAGS :
+
+--> SYN --[ SYNC ]---
+--> ACK --[ ACKNOWLEDGEMENT ]---
+--> FIN	--[ FINISH ]---
+--> RST	--[ RESET ]---
+--> URG	--[ URGE ]---
+--> PSH	--[ PUSH ]---
+
+THESE ARE VERY IMPORTANT FOR CD [ CYBER DEMON ]
+
+----------------------------------------------------
+
+PORTS SCANNING TYPES :
+
+--> TCP CONNECT SCAN (OR) FULL OPEN SCAN 
+
+It is a network scanning technique that determines the status of ports on a target system by fully establishing a TCP Connection with the target host, completing the  three-way handshake , to identify if a port is open , closed , or filtered..
+
+------
+--> SYN SCAN (OR) HALF OPEN SCAN (OR) STEALTH SCAN
+
+It is a tactic that a malicious hacker can use to determine the state of a communications port without establishing a full connection..
+
+It can scan many ports but on the other side of the fire wall ..
+
+This approach , one of the oldest in the repertoire of hackers , is sometimes used to perform a denial of service attack ( DOS ) ...
+
+----------
+
+--> ACKNOWLEDGEMENT SCAN ( OR ) FIREWALL DETECTION SCAN 
+
+It is a type of network scanning technique used in cybersecurity to identify wether a port on a target system is filtered by a fire wall by sending packets with the "acknowledgement" ( ACK ) flag set...
+
+we can get the type of firewalls in that particular system and almost the entire history can be collected from this scan...
+
+---------
+
+XMAS SCAN
+
+It is a network scan in cybersecurity where a system sends packet with multiple TCP flags set ( FIN , URG , and PSH ) to a target machine , resembling a lit-up Christmas tree when viewed in a packet analyzer , used to probe for open ports and potentially identify vulnerabilities by analyzing how the target system responds to such unusual packets....
+
+!## FIN ( if a process is finished then this type of flag is sent )
+
+!## URG ( if a data is very urgent to send then this flag is sent )
+
+!## RST ( it helps to reset the buffer or restart the communication )
+
+
+FIN SCAN 
+
+It is a network scanning technique used in cybersecurity where a hacker sends a TCP packet with only the FIN flag set to a target port to determine if the post is open or closed ...
+
+If ports are opened in an operating system then by sending the FIN SCAN we can close that port  
+
+if the port is closed , the target system will respond with a reset (RST) packet , while an open port typically ignore the packet , allowing the scanner to identify the por status without fully establishing a connection : this method is often used to bypass firewall detection and identify potential vulnerablilities on a system..
+
+We can even check what are all the ports are closed we check ...
+
+
+NULL SCAN 
+
+It is a series of TCP packets that contain a sequence number of 0 and no set flags . In a production environment , there will never be a TCP packet that doesn't contain a flag ...
+
+
+
+ANGRY IP SCANNER 
+
+Main terminology:
+
+Feeder - generator of IP addresses for scanning. Angry IP Scanner provides various kinds of feeders: IP Range, Random, and IP List File. You can select a feeder using the combo box next to the Start button.
+
+Fetcher - gathers specific information about a host, e.g. ping time, hostname, open ports. Fetchers usually represent columns in the scanning results list. You can select additional fetchers by choosing "Tools->Select fetchers" from the menu.
+
+Main terminology (continued):
+
+Alive host - is the host, responding to pinging. These are blue in the results list.
+
+Dead host - is the host, not responding to pinging (red in the list). However, it may still have ports open (if firewall blocks pings). In order to scan these hosts fully, check "scan dead hosts" in the Tools->Preferences dialog.
+
+Open port - a TCP port, responding to connection attempts. Hosts with open ports are green in the results list.
+
+Filtered port - a TCP port, not responding that it is closed (no RST packet). These ports are usually specifically blocked by firewalls for some reason.
+
+Pinging (checking if hosts are alive):
+
+Angry IP Scanner can use different methods for pinging hosts. You can choose between them in the Preferences dialog.
+
+ICMP echo - is the standard method used by the 'ping' program. This one requires administrator or root privileges on most platforms. Note that some firewall software disables sending of ICMP echo reply packets, making alive hosts appear like dead.
+
+UDP - sends UDP packets (datagrams) to one of the host's ports and sees if there is any response (either positive or negative). This is non-standard, but works without special privileges.
+
+TCP - tries to connect to port 80 (http) on the host. This may work better than UDP for some networks, but usually it is worse.
+
+UDP and TCP pinging most often doesn't properly detect routers or other network equipment.
+
+TTL (time to live) - this fetcher works only with ICMP pinging method. Its initial value is usually 64 or 128, and the difference represents the distance to the host in number of nodes it has travelled.
+
+The results list displays the scanning results, one line per each scanned address.
+
+Using the Preferences dialog, you may configure to display:
+- all scanned hosts
+- only alive hosts
+- only hosts with any ports open
+
+Special values (also configurable):
+[n/s] - not scanned value that wasn't scanned at all (eg if the host is dead)
+[n/a] - the value is not available, but was scanned
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+N MAP cmds
+
+--> nmap -sn (ur ip address) to start the nmap scanning
+
+--> nmap - sS ( ur website link or ip add ) to start the stealth scan ( i,e#@@ to know about stealth scan (see the notes) @@#e,i  \
+
+		&	&	&
+
+--> nmap - sT ( ur website link or ip add ) to start the Full scan ( i,e#@@ to know about Full scan (see the notes) @@#e,i  \
+
+OUTPUT ::
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 07:04 EST
+Nmap scan report for trustaquaproducts.in (216.10.241.191)
+Host is up (0.030s latency).
+rDNS record for 216.10.241.191: bh-in-36.webhostbox.net
+Not shown: 985 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+25/tcp   open  smtp
+26/tcp   open  rsftp
+53/tcp   open  domain
+80/tcp   open  http
+110/tcp  open  pop3
+143/tcp  open  imap
+443/tcp  open  https
+465/tcp  open  smtps
+587/tcp  open  submission
+993/tcp  open  imaps
+995/tcp  open  pop3s
+2222/tcp open  EtherNetIP-1
+3306/tcp open  mysql
+
+Nmap done: 1 IP address (1 host up) scanned in 4.81 seconds
+
+--> nmap - sV ( ur website link or ip add ) to start the Version scan ( i,e#@@ to know about version scan (see the notes) @@#e,i  \
+
+OUTPUT ::
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 07:13 EST
+Nmap scan report for trustaquaproducts.in (216.10.241.191)
+Host is up (0.032s latency).
+rDNS record for 216.10.241.191: bh-in-36.webhostbox.net
+Not shown: 985 filtered tcp ports (no-response)
+PORT     STATE SERVICE    VERSION
+21/tcp   open  ftp        Pure-FTPd
+22/tcp   open  ssh        OpenSSH 7.4 (protocol 2.0)
+25/tcp   open  smtp       Exim smtpd 4.96.2
+26/tcp   open  smtp       Exim smtpd 4.96.2
+53/tcp   open  domain     ISC BIND 9.11.4-P2 (RedHat Enterprise Linux 7)
+80/tcp   open  http       Apache httpd
+110/tcp  open  pop3       Dovecot pop3d
+143/tcp  open  imap       Dovecot imapd
+443/tcp  open  ssl/http   Apache httpd
+465/tcp  open  tcpwrapped
+587/tcp  open  tcpwrapped
+993/tcp  open  imaps?
+995/tcp  open  pop3s?
+2222/tcp open  ssh        OpenSSH 7.4 (protocol 2.0)
+3306/tcp open  mysql      MySQL 5.7.23-23
+Service Info: OS: Linux; CPE: cpe:/o:redhat:enterprise_linux:
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 43.73 seconds
+
+
+--> nmap -O  ( ur website link or ip add ) to start the OS scan ( i,e#@@ to know about OS scan (see the notes) @@#e,i  \
+
+
+OUTPUT ::
+
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 07:16 EST
+Nmap scan report for trustaquaproducts.in (216.10.241.191)
+Host is up (0.032s latency).
+rDNS record for 216.10.241.191: bh-in-36.webhostbox.net
+Not shown: 985 filtered tcp ports (no-response)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+25/tcp   open  smtp
+26/tcp   open  rsftp
+53/tcp   open  domain
+80/tcp   open  http
+110/tcp  open  pop3
+143/tcp  open  imap
+443/tcp  open  https
+465/tcp  open  smtps
+587/tcp  open  submission
+993/tcp  open  imaps
+995/tcp  open  pop3s
+2222/tcp open  EtherNetIP-1
+3306/tcp open  mysql
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: bridge|general purpose
+Running (JUST GUESSING): Oracle Virtualbox (95%), QEMU (91%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:qemu:qemu
+Aggressive OS guesses: Oracle Virtualbox (95%), QEMU user mode network gateway (91%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.59 seconds
+
+
+--> nmap -sF  ( ur website link or ip add ) to start the FIN scan ( i,e#@@ to know about FIN scan (see the notes) @@#e,i  \
+
+OUTPUT ::
+
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 07:17 EST
+Nmap scan report for trustaquaproducts.in (216.10.241.191)
+Host is up (0.00066s latency).
+rDNS record for 216.10.241.191: bh-in-36.webhostbox.net
+All 1000 scanned ports on trustaquaproducts.in (216.10.241.191) are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.57 seconds
+
+
+--> nmap -sN  ( ur website link or ip add ) to start the NULL scan ( i,e#@@ to know about NULL scan (see the notes) @@#e,i  \
+
+
+OUTPUT ::
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 07:18 EST
+Nmap scan report for trustaquaproducts.in (216.10.241.191)
+Host is up (0.00045s latency).
+rDNS record for 216.10.241.191: bh-in-36.webhostbox.net
+All 1000 scanned ports on trustaquaproducts.in (216.10.241.191) are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.64 seconds
+
+
+--> nmap -sX  ( ur website link or ip add ) to start the XMAS scan ( i,e#@@ to know about XMAS scan (see the notes) @@#e,i  \)
+
+
+OUTPUT ::
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 07:37 EST
+Nmap scan report for trustaquaproducts.in (216.10.241.191)
+Host is up (0.00030s latency).
+rDNS record for 216.10.241.191: bh-in-36.webhostbox.net
+All 1000 scanned ports on trustaquaproducts.in (216.10.241.191) are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 1 IP address (1 host up) scanned in 1.16 seconds
+
+
+--> nmap -A  ( YOUR WEBSITE LINK ) or ( EVEN UR IP ADDRESS )
+
+[[[ FOR FULL AGGRESSIVE SCAN ]]]]
+
+
+INSTEAD OF ANGRY IP SCANNER WE CAN ALSO TAKE ALL THE PORTS FROM NMAP ( THE ULTIMATE POWERFULL TOOL ))
+
+
+--> nmap -sP 10.0.2.0/24 ( u can take this from ur ip add )
+
+OUTPUT ::
+
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-21 12:02 EST
+Nmap scan report for 10.0.2.2
+Host is up (0.00080s latency).
+MAC Address: 52:54:00:12:35:02 (QEMUt virtual NIC)
+Nmap scan report for 10.0.2.3
+Host is up (0.00077s latency).
+MAC Address: 52:54:00:12:35:03 (QEMU virtual NIC)
+Nmap scan report for 10.0.2.4
+Host is up (0.00069s latency).
+MAC Address: 52:54:00:12:35:04 (QEMU virtual NIC)
+Nmap scan report for 10.0.2.15
+Host is up.
+Nmap done: 256 IP addresses (4 hosts up) scanned in 2.51 seconds
+                                                                   
+
+NMAP DECOY( FOR NOT BEING FOUND )
+
+--> use 
+
+sudo nmap -sS ( some fake ip address ) ( ur real ip address )
+
+[ this will confuse the guy who is monitoring the traffic and if the no.of decoys increase the percentage of u getting caught is less ]
+
+
+
+ ENUMERATION : 
+
+It is a data gathering process where in a cyber attackers extracts information about a network , such as host IP addresses , DNS and user names, or sharing and network protocols, intending to find weak points and breach the network.
+
+THERE ARE LOT OF TOOLS IN THIS ENUMERATION PROCESS
+
+--> METASPLOITABLE 2
+
+NAT :
+
+Network Address Translation (NAT) is a technique that allows multiple devices on a private network to share a single public IP address. It's used by organizations and internet service providers (ISPs) to enable devices on a private network to communicate with devices on a public network. 
+
+BRIDGED ADAPTER :
+
+A bridged adapter is a network configuration mode that connects a virtual machine (VM) to a physical network using the host computer's network adapter: 
+In bridged mode, the VM is treated as a unique entity on the network, with its own IP address and ethernet hardware address. This allows the VM to participate fully in the network, communicating with other devices and being contacted by them. 
+
+NET BIOS :
+
+NetBIOS, or Network Basic Input/Output System, is a network service that allows applications on different computers to communicate and share resources over a local area network (LAN): 
+Purpose
+NetBIOS allows applications to establish sessions and communicate with each other to access shared resources, such as files and printers. 
+
+==========================================================================================================================================================
+
+PASSWORD CRACKING 
+
+
+There are different types of attacks
+
+--> PASSWORD GUESSING 
+--> BRUTE FORCE ATTACK 
+--> DICTIONARY BASED ATTACK 
+--> SYLLABLE BASED ATTACK 
+
+
+BRUTE FORCE ATTACK :
+
+A brute force attack is a hacking method that uses trial and error to crack passwords , login credentials and encryption keys. It is simple yet reliable tactic for gaining unauthorized access to individual accounts and organizations systems and network.. 
+
+
+Before it was easy to use brute force attack in google accs cracking ..
+
+but now it is not possible there are lot of security measures taken like 
+
+TWO FACTOR AUTHENTICATION OR MULTI FACTOR AUTHENTICATION..
+
+
+MULTI FACTOR AUTHENTICATION :
+
+It is a security method that requires users to provide more than one form of identification to log in to an account.
+
+
+NOW LETS LOOK AT A TOOL WHICH GIVES US THE POSSIBILITY OF PASSWORDS IN OUR JOURNEY OF CRACKING..
+
+CUPP (COMMON USER PASSWORD PROFILER):
+
+This tool will do what is given above ..
+
+TO DOWNLOAD IT IN YOUR LINUX STEPS :
+
+--> sudo apt install git
+--> git clone https://github.com/Mebus/cupp.git
+--> ls 
+--> cd cupp
+--> sudo apt install python3
+--> python3 cup.py -i ( this -i can be used to interact with the tool )
+[ if any tool while ur using if it comes out then use this -i ]
+--> now it will start working 
+--> now give the req inputs then finish , it will be stored in a text file 
+--> cat ( the file name ) and enter
+
+FURTHER TO GET PASSWORDS IN PHONES ( OR TO FIND PHONE LOCK OR CRACK IT )
+
+--> we can use an inbuilt tool in linux 
+ 
+do the further steps to get it 
+
+--> crunch 5 5 1234567890 -o text .txt
+
+NOW TO GET PASSWORDS BY CRAWLING A WEBSITE 
+
+TOOL USED IS CEWL :
+
+--> cewl -d 3 -m 8 -w you.txt cbtka.com
+
+
+
+
+                                                     MR . ROBOT ( LEARNING )
+
+ETHICAL HACKING TERMS 
+
+-- > RUDY ATTACK 
+-->elpscrk
+--> gnome 
+--> KDE
+ETA
+DNS
+back server
+IRC CONTACTS
+dat file 
+pastebi
+honeypot
+air gapped your private network 
+
+terminal codes 
+
+--> ssh -l 
+--> find / - type d l>/dev/null 2>
+--> vi / tmp / noaccess
+--> ls -l /opt/2/task/2/fd1nfo
+--> ls -l fsociety
+REVERSE ENGINEER THE MALWARE
+BLANK'S DISK RECOVERY 
+ 
+                                                      PROFESSIONAL ETHICAL HACKER 
+
+VENV ( virtual machine )
+
+start code : --> python3 -m venv venv
+		source venv/bin/activate
+
+
+TRY HACK ME ( NOTES )
+
+OFFENSIVE SECURITY INTRO 
+
+Gobuster tool for a fake brute force attack ( a small intro )
+
+
+
+DEFENSE SECURITY INTRO
+There is much more to defensive security. Aside from the above, they are in the following 
+Security Operations Center (SOC)
+Threat Intelligence
+Digital Forensics and Incident Response (DFIR)
+Malware Analysis
+
+
+
+
+
+
+
+
+
+
+INCIDENT RESPONSE 
+
+The four major phases of the incident response process are:
+Preparation: This requires a team trained and ready to handle incidents. Ideally, various measures are put in place to prevent incidents from happening in the first place.
+Detection and Analysis: The team has the necessary resources to detect any incident; moreover, it is essential to analyze any detected incident further to learn about its severity.
+Containment, Eradication, and Recovery: Once an incident is detected, it is crucial to stop it from affecting other systems, eliminate it, and recover the affected systems. For instance, when we notice that a system is infected with a computer virus, we would like to stop (contain) the virus from spreading to other systems, clean (eradicate) the virus, and ensure proper system recovery.
+Post-Incident Activity: After a successful recovery, a report is produced, and the lesson learned is shared to prevent similar future incidents.
+
+	
+
+
+WHAT IS NETWORKING 
+The first iteration of the Internet was within the ARPANET project in the late 1960s. This project was funded by the United States Defence Department and was the first documented network in action. However, it wasn't until 1989 when the Internet as we know it was invented by Tim Berners-Lee by the creation of the World Wide Web (WWW). It wasn't until this point that the Internet started to be used as a repository for storing and sharing information, just like it is today.
+
+
+
+IP ADDRESS :
+An IP address is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as IP addressing & subnetting, 
+PUBLIC / PRIVATE
+ 
+PRIVATE : ( LAST FOR 24 HOURS )
+192.168.1.77
+
+PUBLIC  : 
+86.157.52.21
+IPV4 / IPV6 
+
+
+IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion)
+IPv6 , Supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4
+
+
+MAC ADDRESS
+
+
+interesting thing with MAC addresses is that they can be faked or "spoofed" in a process known as spoofing. This spoofing occurs when a networked device pretends to identify as another using its MAC address.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PING ( ICMP )
+ Ping uses ICMP (Internet Control Message Protocol) packets to determine the performance of a connection between devices [  if the connection exists or is reliable.]
+
+ The time taken for ICMP packets travelling between devices is measured by ping ..
+
+This measuring is done using ICMP's echo packet and then ICMP's echo reply from the target device.
+
+
+
+INTRO TO LAN :
+LOCAL AREA NETWORK ( LAN ) TOPOLOGIES :--
+
+STAR TOPOLOGY 
+STAR TOPOLOGY is actually one of the most useful and costliest topology among all the other topologies 
+
+Devices are individually connected via a central networking device such as switch or hub . This topology is the most commonly found today because of its reliability and scalability - despite the cost 
+
+Any information sent to a device in this topology is sent via the central device to which it connects .
+
+More wires aknd a dedicated networking device is required , hence it is expensive than others…
+
+
+
+BUS TOPOLOGY :
+This type of connection relies upon a single connection which is known as a back bone cable.
+
+It is very quickly prone to becoming slow and bottlenecked ( stuck completely ) if devices within the topology are simultaneously requesting data.
+
+The bottleneck also results in very difficult troubleshooting because it quickly becomes difficult to identify which device is experiencing issues with data all travelling along the same route ..
+
+Bus topologies are of the easier and more cost effiecient topologies to set up their expenses , such as cabling or dedicated networking equipment used to connect these devices 
+
+
+RING TOPOLOGY :
+Devices , such as computers are directly connected to each other to form a loop , cabling work is required a bit and less dependence dedicated hardware such as within a star topology ..
+Ring topologies are less prone to bottlenecks, such as within bus topology 
+
+
+
+
+
+
+
+
+WHAT IS ROUTER ??
+Routing is the label given to the processs for data travelling across networks. Routing involves creating a path between networks so that this data can be successfully delivered .
+
+These routers actually travel through all the ISPs ( Internet Service Provider )  ,, Lemme give u the example that TheGod  ( from the discord server )
+
+Routers in homes and offices are connected to Internet Service Providers. These ISPs have millions of servers and separate networks connected to each other and they all keep track of each other. So my router goes "Where is JON's router?" and the servers that are closest to my router go "Who knows where JON's router is". Then a server says "Yes, JON's router is in India, give me the data and I'll send it to the data center in India" and so on until it reaches you
+
+
+SWITCHES :
+Switches are dedicated devices within a network that are designed aggregate multiple other devices such as computers , printers or any other networking-capable device using ethernet  
+	
+Switches can connect a large number of devices by having ports of 4,,8,16,32 and 64 for devices to plug into. 
+
+Unlike Routers , these devices do not perform routing in the sense of directing paths along a certain route using the IP protocol , Instead . Switches smaller , more manageable called “ PACKET SWITCHING “ to break down pieces of data into smaller  , more manageable chunks of data called packets
+
+
+A PRIMER ON SUBNETTING :
+
+Subnetting is the term given to splitting up a network into smaller , minature networks within itself 
+
+
+Subnetting is achieved by splitting by the number of hosts that can fit within the network , represented by a number called a subnet mask ..
+
+IP address is made up of four sections called octets . The same goes for a subnet mask which is also represented as a number of 8 bytes ( 32bits ) , ranging from 0 to 255 ( 0-255 )
+Subnets use IP address in three different ways:
+Identify the network address 
+Identify the host address 
+Identify the default gateway 
+
+There are three important subnets using the IP s:
+Network address having the IP ( 192.168.1.0 )
+Host address having the IP ( for example ( 192.168.1.100 )
+Default gateway having the IP ( 192.168.1.254 )
+
+Why can we connect only 254 devices , when we do have 256 ip address ( private )
+Its because , there to IP address which will not be given to allocate as private ip address for our devices , and those are 
+
+192.168.1.0 ( This is the private IP ADDRESS used by the network itself ..
+
+192.168.1.255 ( This is the private IP address used for broadcasting ..
+So this is the reason we have 254 IP address ( COZ THOSE TWO ADDRESS ARE GIVEN , AND THEY CANNOT BE ALLOCATED AS PRIVATE ADDRESS BY THE NETWORK )
+
+
+Subnetting provides a range of benefits , including :
+Efficiency 
+Security 
+Full control 
+
+ARP PROTOCOL ( ADDRESS RESOLUTION PROTOCOL )
+ARP PROTOCOL is used for finding a device’s MAC ADDRESS in the network  by using THE IP ADDRESS of that device ..
+And that ip address will be stored in the device which was searching for other devices ( MAC ADDRESS ) .. And that is known as cache ..
+
+
+These cache stores the identifiers of other devices on the network .
+
+In order to map these two identifiers together ( IP ADD AND MAC ADD) , the ARP protocol sents two types of messages :
+ARP REQUEST 
+ARP REPLY 
+
+ARP REQUEST : 
+This is the request given from the device  which is searching for the device 2 MAC ADD , by having the IP ADD in its hand .. It broadcasts the request to every other device found in the network, 
+Then once the device 2 acknowledges that the ip address that device 1 is searching it sends a reply , which is known as the ARP reply ..
+ARP REPLY : 
+This reply is returned to the device 1 to acknowledge this . The device 1 will now remember this and store it in the ARP CACHE .. so it does not require any ip address to find for the conversation …
+   
+And it is also used in the other way around ..
+For the first time if any device gets connected to the network for the first time , it searches for the a device 2 mac address to start a conversation with the the  device 2 ip address ( taken from the router , device 1 that gets connected  , ( AND THEN THE ARP REQUEST IS SENT )  once it receives ( ARP REPLY ) the MAC address it gets stored in the ARP CACHE ..
+For the next time when it needs to contact device 2 , it does not require its ip address , but it already has the MAC ADRESS ( DEVICE 2 ) stored in the cache with that mac address it can even take the ip address .. 
+
+THIS IS THE FUNCTION OF THE ARP PROTOCOL 
+
+DHCP PROTOCOL ( DYNAMIC HOST CONFIGURATION PROTOCOL ) server  :
+IP addresses can be assigned either manually , by entering physically into device , or automatically and most commonly by using a DHCP .
+
+When a device connects to a network, if it has already been manually assigned an ip address , it sends out a request ( DHCP Discover ) to see if any DHCP servers are on the network . 
+
+DHCP DISOVER :
+This request is sent by the device to find out any DHCP servers are available in the network to get its IP address ..
+
+The DHCP server then replies back with an IP address the device could use ( DHCP OFFER ) 
+DHCP OFFER :
+This offer is sent to the requested device . the offer contains the IP address of that particular device .
+
+The device then sends a reply confirming it wants the offered IP address ( DHCP REQUEST )
+
+DHCP REQUEST :
+This request is sent by the device to get verification by the DHCP SERVER  ( that the device can use this IP or not ) 
+
+The DHCP server sends a reply acknowledging this has been completed , and the device can start using the IP address ( DHCP ACK ) . 
+
+DHCP ACK :
+This acknowledgement is sent from the DHCP SERVER , saying that it is good to go with the IP ADDRESS THE DHCP SERVER ALLOCATED ..
+
+
+OSI MODEL : 
+The OSI MODEL ( for Open Systems Interconnection Model ) is an absolute fundamental model used in networking . 
+This critical model provides a frame work dictating how all networked devices will send , receive and interpret data.
+
+Data sent across a network that follows the uniformity of the OSI model can be understood by other devices 
+
+OSI MODEL contains 7 layers in its framework , Each layer has its own responsibility and its arranged for LAYER 7 TO LAYER 1..
+
+
+
+
+
+
+
+
+
+
+
+
+
+ENCAPSULATION : 
+ At every individual layer that data through , specific , process take place , and pieces of information are added to this data , which is what we call as ENCAPSULATION..
+
+
+
+
+ APPLICATION LAYER – 7 :
+
+ The application layer of the OSI model is the layer that you will most familiar with . This familiarity is because the application layer is the layer in which protocols and rules are in the place to determine how the user should interact with data sent or received .
+
+Everyday applications such as email clients , browsers or file server browsing software .
+
+Graphical User Interface ( GUI ) for users to interact with data sent or received . Other protocols include DNS ( Domain Name System ), which is how website address are translated into IP address
+
+PRESENTATION – 6 :
+
+Layer 6 of the OSI MODEL is the layer in which standardization starts to take place. Because software developers can develop any software such as an email client differently , the data still needs to be handled the same way  -- no matter how the software works.
+
+This layer act as a translator for data to and from the application layer ( layer 7 ). The receiving computer will also understand data sent to a computer in one format destined for in another format . For example, when you send an email, the other user may have another email client to you, but the contents of the email , will still need to display the same.
+
+Security features such as data encryption ( like HTTPS  when visting a secure site ) occur at this layer..
+
+SESSION ( LAYER – 5 ) :
+This layer is used to create a connection once the data has been correctly translated or formatted from the presentation layer ( layer – 6 ) . 
+Session layer ( layer – 5 ) , what a connection is established , a session is created , Whilst this connection is active so is the session 
+The session layer ( layer 5 ) synchronizes the two computers to ensure that they are on the same page before data is sent and received .’
+
+Once these checks are in place session layer will begin to divide up the data sent into smaller chunks of data and begin to send these chunks ( packet ) one at a time 
+
+If the connection gets cut of during the transmission , then the packets will not be sent properly , and if it is TCP ( u have to re do the process of transmission from the starting 
+
+TRANSPORT ( LAYER 4 ) :
+Layer 4 of the OSI MODEL plays a vital part in transmitting data across a network.. 
+When data is sent between two devices , it follows one of two different protocols that are decided based on :
+TCP 
+UDP 
+
+TCP ( TRANSMISSION CONTROL PROTOCOL ):
+This protocol is designed with reliability and guarantee in mind .
+This protocol reserves a constant connection between the two devices for the amount of time it takes for the data to be sent and received .
+TCP checks the errors in the packets , if the packets are incomplete then , it will not proceed further .. You need to send the packets again ,
+If the packets are good to go , then the layer 5 has been received and reassembled in the same order. 
+
+
+TCP is used for situations such as file sharing , internet browsing or sending email . This usage is because these services require the data to be accurate and complete ( no good having a half file )..
+
+
+UDP ( USER DATAGRAM PROTOCOL )  : 🡪 
+It is not that smart like ( TCP ) , ( Data ) UDP is sent to  the computer wether it gets there or not .
+There is no synchronization between the two devices..
+
+
+
+
+NETWORK :
+The third layer of the OSI Model ( NETWORK LAYER ) is where the packet gets routed .
+Routing simply determines the most optimal path in which these chunks of data should be sent .
+OSPF ( OPEN SHORTEST PATH FIRST )
+RIP ( ROUTING INFORMATION PROTOCOL ) 
+
+
+At this layer , everything is dealt with IP Address such as 192.168.1.100 . Devices such as routers capable of delivering packets using IP address are known at Layer 3 devices – because they are capable of working at the third layer of the OSI MODEL ..
+
+
+
+DATA LINK – LAYER 2 
+The data link focuses on the physical addressing of the transmission . It receives a packet from the network layer ( Including the IP address for the remote computer ) and adds in the physical MAC ( MEDIA ACCESS CONTROL ) address of the receiving endpoint . Inside every network enabled computer is a Network Interface Card ( NIC ) which comes with a unique MAC address to identify it …
+
+MAC ADDRESS  is a number which is given when a device gets manufactured , so there cant be any duplicates . the one thing is that it can spoofed . 
+
+Its actually the physical address that is used to identify where exactly to send the information.
+
+PHYSICAL ( layer 1 ) 
+This layer is one of the easiest layers to grasp. Put simply , this layer references the physical components in the hardware used in networking and is the lowest layer that u will find . Devices use electrical signals to transfer data between each other in a binary numbering system  ( 1’s and 0’s ) 
+
+
+PACKETS AND FRAMES : 
+Packets and frames are both ways data is organized for sending between devices, but they work at different stages. A packet is a chunk of data created by a network protocol (like IP) that includes information about where it's from and where it’s going. Think of it as a packaged letter that has the address on it. 
+
+A frame is what’s used at the physical link layer (like Ethernet) to actually send that packet over a cable or wireless connection. It wraps the packet with additional details needed for the local network to recognize and handle it, like sender and receiver MAC addresses and error-checking info.
+
+Basically, the packet is the data you want to send with addresses and info added by higher layers, and the frame is how that packet gets physically sent over the local network.
+EXAMPLE :
+The messages we send over Discord are processed by the system as packets and then sent across the network as frames until it gets to the router and so on.
+Yeah, imagine you are sending a letter through the mail.
+
+
+The packet is like a single letter with the message and the sender's and receiver's addresses inside.,
+The frame is like the envelope that holds the letter, including the postal stamp and the mailing address outside.
+
+HINT :
+Its safe to assume If we are talking anything about IP address then we are talking about Packets . 
+When the encapsulating information is stripped away , then we are talking about Frames.
+
+
+
+
+
+TCP/IP ( The Three Way handshake )
+This protocol is very similar to the OSI model that we have already seen previously , But this section is quite advanced ..
+The TCP/IP protocol consists of four layers :
+APPLICATION 
+TRANSPORT 
+INTERNET
+NETWORK INTERFACE 
+
+The process of adding information in every layer of the TCP MODEL as the piece of data ( or packet ) traverses it  is known as ENCAPSULATION 
+Where the reverse of this process Is known as DECAPSULATION ..
+TCP is connection-based , which means the TCP must establish a connection between both a client and a device acting as a server b4 data Is sent 
+Because of this statement , TCP guareantees that any data sent will be received on the other end . This process is known as ( Three – way – handshake )
+
+
+
+TCP packets contain various sections of information known as headers that are added from encapsulation ..
+
+
+
+
+Next we will come on to discuss the Three Way Handshake , the term given for the process used to establish a connection between two device . 
+The THREE WAY HANDSHAKE communicates using a few special messages ..
+
+
+The diagram below shows a normal Three way handshake process between Alice and Bob in 
+
+
+
+
+TCP Closing a Connection :
+First , TCP will close a connection once a device has determined that the other devices has successfully received all of data ..
+Because TCP reserves system resources on a device , it is best practise to close a TCP connections as soon as possible 
+To initiate the closure of a TCP connection , the device will send a “FIN” packet to the other device . Of course , with TCP , the other device will also have to acknowledge this packets ..
+
+
+The USER DATAGRAM PROTOCOL (UDP) :
+is another protocol that is used for the communication between the devices. 
+UDP is a stateless protocol that does not require any constant connection between the two devices the data to be sent . 
+For example : There is no three way handshake is taking place or there is any synchroniztaion between the two devices 
+
+No process takes in place in setting up a connection between two devices .. 
+That there is no regard for wether or not data is received , and there are no safeguards such as those offered by TCP , such as data integrity 
+
+UDP packets are much simpler than TCP packets and have fewer headers.
+However, both protocol share some headers , which are what is annoted in the table below :
+
+
+
+
+UDP is  stateless , NO acknowledgement is set during the connection .. 
+
+
+
+PORTS ::🡪
+
+
+f 
+
+
+
+
+EXTENDING YOUR NETWORK 
+Port forwarding is an essential component in connecting application and services to the internet 
+ Without port forwarding , applications and services such as web servers are only available to devices within the same network 
+
+
+
+
+
+If the administrator wanted the website to the accessible to the public ( using the internet ). They would have to implement port  forwarding like in the diagram below :
+n
+With this design ,Network #2 will now be able to access the webserver running on #1 Network (82.62.51.70)
+It is easy to confuse port forwarding with the behaviours of a firewall..
+FIREWALLS ( 101 ) :
+A firewall is a device within a network responsible for determining what traffic is allowed to enter and exit . 
+Think of a firewall as border security for a network .
+An administrator can configure a firewall to permit or deny traffic from entering or exiting a network based on numerous factors :
+
+Fire walls perform packet inspection to determine the answer for these questions 
+
+Firewalls come in all shapes and sizes . From dedicated pieces of hardware ( often found in large networks like businesses ) that can handle a magnitude of data to residential router ( like at your home ) or software 
+
+such as SNORT , firewalls can be categorized into 2 to 5 categories .
+
+
+
+VPN BASICS ( VIRTUAL PRIVATE NETWORK ) :
+A Virtual Private Network ( or VPN for short ) is a technology that allows devices on separate networks to communicate securely by creating a dedicated path between each other over the internet ( known as a tunnel ). 
+Devices connected within this tunnel from their own private network .
+For example , only devices within the same network ( such as within a business ) can directly communicate . However , a VPN allows two offices to be connected . 
+
+LETS TAKE THE DIAGRAM BELOW , WHERE THERE ARE THREE NETWORKS :
+
+
+The devices connected on NETWORK #3 are still a part of NETWORK #1 and NETWORK #2 but also form together to create a private network ( NETWORK #3 ). That only devices that are connected via this VPN can communicate over ..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VPN tech has improved over the years :
+
+
+ROUTER :
+What is a Router ?
+
+It’s a router job to connect networks and pass data between them .it does this by using routing ( hence the name router ).
+
+Router is the label given to the process of data travelling across networks . Routing involves creating a path between networks so that this data can be successfully delivered . Routers operate at Layer 3 of the OSI model . They often feature an interactive interface ( such as a website or a console ) that allows an administrator to configure various rules such as port forwarding or firewalling.
+
+
+
+
+ROUTING is useful when devices are connected by many paths , such as in the diagram below , where the most optimal path is taken :
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SWITCH :
+
+What is a SWITCH ? 
+A switch is a dedicated networking device responsible for providing a means of connecting to multiple devices , Switches can facilitate many devices ( from 3 to 63 ) using ETHERNET cables .
+
+Switches can operate at both layer 2 and layer 3 of the OSI model . However these are exclusive in the sense that Layer 2 switches cannot operate at layer 3.
+
+
+These switches are solely responsible for sending frames to the correct device .
+Now let’s move onto layer 3 switches . These switches are more sophisticated than layer 2 , as they can perform some of the responsibilities of a router. 
+Namely , these switches will send frames to devices ( as layer 2 does ) and route packets to other devices using the IP PROTOCOL . 
+Let’s take a look at the diagram below of a layer 3 switch in action , We can see that there are two IP addresses :
+192.168.1.1
+192.168.2.1
+
+A technology called VLAN ( Virtual Local Area Network ) allows specific devices within a network to be virtually split up . This split means they call benefit from things such as an internet connection but are treated separately . this network separation provides security because it means that rules in place determin how specific devices communicate with each other ..
+See the diagram below :
+
+In the context of the diagram above “ Sales Department “ and “ Accounting Department “ will be able to access the internet , but not able to communicate with each other ( although they are connected to the same switch ..
+
+HOW THE WEB WORKS :
+DNS IN DETAIL :
+
+DNS ( Domain Name System ) :->
+It provides a simple way for us to communicate with devices on the Internet without remembering complex numbers .
+Much like every house has a unique address for sending mail directly to it , every computer on the internet has its own unqiue address to communicate with it called an IP address.
+An IP address looks like the following 104.26.10.229 , 4 sets of digits ranging from 0 – 225 separated by a period.
+When you want to visit a website, it's not exactly convenient to remember this complicated set of numbers, and that's where DNS can help.
+So instead of remembering 104.26.10.229, you can remember tryhackme.com ( example for a website ) instead.
+
+
+
+
+
+
+DOMAIN HIERARCHY 
+TLD ( Top – Level – Domain ):
+A TLD is the most righthand part of a domain name. So, for example, the tryhackme.com TLD is .com. 
+There are two types of TLD 
+
+gTLD( Generic Top Level Domain )
+ccTLD (Country Code Top Level Domain ).
+
+gTLD was meant to tell the user the domain name's purpose; for example, a .com would be for commercial purposes, .org for an organisation, .edu for education and .gov for government. 
+
+ccTLD was used for geographical purposes, for example, .ca for sites based in Canada, .co.uk for sites based in the United Kingdom and so on.
+
+df
+Due to such demand, there is an influx of new gTLDs ranging from .online , .club , .website , .biz and so many more. For a full list of over 2000 TLDs click here.
+( https://data.iana.org/TLD/tlds-alpha-by-domain.txt)
+
+SECOND LEVEL DOMAIN :
+Taking tryhackme.com as an example, the .com part is the TLD, and tryhackme is the Second Level Domain. 
+When registering a domain name, the second-level domain is limited to 63 characters + the TLD and can only use  [ a-z ] , [ 0-9 ] and hyphens (cannot start or end with hyphens or have consecutive hyphens).
+SUBDOMAIN :
+A subdomain sits on the left-hand side of the Second-Level Domain using a period to separate it; for example, in the name admin.tryhackme.com the admin part is the subdomain.
+A subdomain name has the same creation restrictions as a Second-Level Domain, being limited to 63 characters and can only use [ a-z ] , [  0-9  ]and hyphens (cannot start or end with hyphens or have consecutive hyphens).
+You can use multiple subdomains split with periods to create longer names, such as jupiter.servers.tryhackme.com.
+But the length must be kept to 253 characters or less. There is no fixed limit to how many subdomains you can create, as long as the full domain name stays within the 253-character limit.
+
+
+
+
+
+DNS RECORD :🡪
+DNS isn't just for websites though, and multiple types of DNS record exist. We'll go over some of the most common ones that you're likely to come across.
+A Record ( Address Record )
+These records resolve to IPv4 addresses, for example 104.26.10.229
+AAAA Record ( QUAD A Record )
+These records resolve to IPv6 addresses, for example 2606:4700:20::681a:be5
+CNAME Record (Canonical Name) 
+These records resolve to another domain name, for example, TryHackMe's online shop has the subdomain name store.tryhackme.com which returns a CNAME record shops.shopify.com. Another DNS request would then be made to shops.shopify.com to work out the IP address.
+
+🧠 Simple Example:
+You type:
+www.coolhacks.com
+But the CNAME record says:
+"Don’t go directly here. This is just a nickname. Go to coolhacks.net instead."
+So your browser goes to coolhacks.net to get the real IP address. 
+Ip address is required to acess the webserver where the website is located ..
+
+MX Record (Mail Exchange Record):
+These records resolve to the address of the servers that handle the email for the domain you are querying, for example an MX record response for tryhackme.com would look something like alt1.aspmx.l.google.com. These records also come with a priority flag. This tells the client in which order to try the servers, this is perfect for if the main server goes down and email needs to be sent to a backup server.
+An MX record tells email services where to deliver emails for a domain.
+That means:
+If someone sends an email to hello@example.com,
+the email will be delivered to the mail server defined in the MX record.
+
+
+
+TXT Record
+ TXT records are free text fields where any text-based data can be stored. TXT records have multiple uses, but some common ones can be to list servers that have the authority to send an email on behalf of the domain (this can help in the battle against spam and spoofed email). They can also be used to verify ownership of the domain name when signing up for third party services.
+
+As this is too complicated lemme clear this to you with a simple imaginery conversation with me and DNS ..
+🎭 Scene: CYber DemOn sets up his secret hacking domain...
+👾 You (CYber DemOn):
+“Yo DNS, I’m setting up my evil base at hacktheworld.com. I need email to work, and I want Google to know this is really mine.”
+🧠 DNS (the internet’s brain):
+“Alright, boss. I’ll need some TXT records for that. You know... secret sticky notes inside your domain.”
+👾 You:
+“Sticky notes?”
+🧠 DNS:
+“Yeah! A TXT record is like a note you leave in your domain saying:
+➡️ ‘Only Google is allowed to send my emails.’
+➡️ ‘I’m the true owner of hacktheworld.com — verified by Google.’
+➡️ Or just... "Don't hack me please 😅"”
+
+📦 TXT Record Example:
+"v=spf1 include:_spf.google.com ~all"
+This says:
+“Only Google is allowed to send email for me. If anyone else tries — yeet them into the spam void.”
+
+👾 You:
+“Dang, so it’s like adding rules and notes that mail servers and companies can read?”
+🧠 DNS:
+“Exactly. But remember, it’s just text. It doesn’t do magic — but it tells others what rules to follow.”
+✅ Final Summary:
+TXT record = little notes in your domain ✍️
+Used for:
+Email protection (like SPF/DKIM)
+Proving domain ownership
+Adding secret instructions or warnings 😏
+These records are often used for domain verification, email authentication (like SPF, DKIM, and DMARC), and other miscellaneous verification purposes. 
+
+
+
+
+Why Records Are Important:
+Without records, the browser wouldn't know where to go when you type a website.
+Email wouldn’t know which server to deliver to.
+DNS records enable flexibility (you can point subdomains, redirect, or handle services like mail, security, etc).
+
+
+WHAT HAPPENS WHEN YOU MADE A DNS REQUEST ??
+
+
+When you request a domain name, your computer first checks its local cache to see if you've previously looked up the address recently; if not, a request to your Recursive DNS Server will be made.
+A Recursive DNS server is usually provided by your ISP , but you can also choose your own .
+
+A Recursive DNS Server is usually given by your ISP, but you can use your own, like:
+Google DNS → 8.8.8.8        
+Cloudflare DNS → 1.1.1.1   
+Both Google and Cloudflare DNS are themselves a recursive DNS server .
+It handles all the DNS lookups for you to find website IPs. 
+
+
+🔁 What is a Recursive DNS Server?
+A recursive DNS server is like a helper that finds the IP address for a website on your behalf — even if it has to ask multiple other servers.
+
+🧠 Simple Example:
+You type tryhackme.com in your browser.
+
+Your device asks the recursive DNS server:
+“Hey, what’s the IP for tryhackme.com?”
+If it doesn’t know the answer, it does the work:
+📍 Asks Root DNS Server → "Where's .com info?"
+📂 Asks TLD DNS Server (for .com) → "Where's tryhackme.com?"
+🧠 Asks Authoritative Nameserver → Gets the IP
+✅ Sends the IP back to you
+And it remembers (caches) the answer for next time.
+
+✅ In Short:
+A recursive DNS server finds the IP for a domain by recursively querying other DNS servers — and gives you the final answer.
+
+📌 Example Recursive DNS Servers:
+Google DNS → 8.8.8.8
+Cloudflare DNS → 1.1.1.1
+Your ISP's DNS
+
+
+This server also has a local cache of recently looked up domain names . If a result is found locally , this is sent back to your computer , and your request ends here ( this is common for popular and heavily requested services such as GOOGLE , FACEBOOK , TWITTER ).f
+
+If the request cannot be found locally , a journey begins to find the correct answer, starting with the internet’s root DNS servers. 
+
+The root servers act as the DNS backbone of the internet; their job is to redirect you to the correct Top Level Domain Server, depending on your request. If, for example, you request www.tryhackme.com, the root server will recognise the Top Level Domain of .com and refer you to the correct TLD server that deals with .com addresses.
+
+The TLD server holds records for where to find the authoritative server to answer the DNS request . The authoritative server is often also known as the nameserver for the domain .
+
+A nameserver is a special DNS server that holds the actual records (like IP address) for a domain name.
+
+Why Important?
+It’s the final source of truth for a domain’s DNS records.
+It stores info like:
+A record (IP address)
+MX record (mail)
+CNAME (aliases)
+This section is where , DNS RECORDS plays an important role .
+__________________________________________________________________________
+🧠 Do DNS servers store A, CNAME, MX, etc.?
+🔥 Only Authoritative DNS Servers store real DNS records like:
+A record (IP address)
+CNAME (alias)
+MX (mail server)
+TXT, NS, etc.
+
+
+ For example, the name server for tryhackme.com is kip.ns.cloudflare.com and uma.ns.cloudflare.com. 
+ You'll often find multiple nameservers for a domain name to act as a backup in case one goes down.
+
+
+
+An authoritative DNS server is the server that is responsible for storing the DNS records for a particular domain name, and where any updates to your domain name, DNS records would be made. 
+
+Depending on the record type, the DNS record is then sent back to the recursive DNS server, where a local copy will be cached for future requests and then relayed ( sent )back to the original client ( my device ) that made the request.
+
+DNS records all come with a TTL ( Time to Live ) value . This value is  a number represented in seconds that the response should be saved , for locally until you have to look it up again . 
+
+Caching saves on having to make a DNS request every time you communicate with a server ..
+
+
+
+
+
+THE PROCESS :
+
+🔁 What happens:
+You request a domain like tryhackme.com.
+Recursive DNS server finds the IP by asking other DNS servers.
+It stores (caches) the result locally.
+It serves that cached result to anyone who asks, as long as the TTL hasn't expired.
+
+🕒 But after the TTL:
+Once the TTL (like 300 seconds) is over:
+The cached record is removed (erased) from memory.
+The recursive server has to query the authoritative server again if the domain is requested.
+
+
+🧠 In Simple Words:
+✅ Yes, recursive DNS servers do cache DNS records locally,
+❌ But they don’t keep them forever — only until the TTL expires.
+The same goes for the caches that is stored in the user’s device .. It disappears once TTL expires ..
+
+QUESTION TIME :
+So do our device have the records of ip address of the website that we have searched so far ?
+Answer: 
+💾 Where is this cache?
+On your operating system (Windows, Linux, Android, etc.)
+On your browser (like Chrome or Firefox may also have their own DNS cache)
+
+🔍 Why?
+So the next time you visit the same website, your device:
+Doesn't ask the DNS server again
+Uses the cached IP (if still valid based on TTL)
+
+🧠 Example:
+You visit tryhackme.com:
+Your device stores its IP (like 104.21.92.53) in local DNS cache
+Next time, your system uses this saved IP — much faster!
+
+⚠️ But:
+If the TTL expires, your device clears that entry.
+If you restart your device or flush the cache, it’s gone too.
+
+✅ In short:
+Yes — your device keeps recent IP addresses of websites you've visited,
+but only for a limited time, thanks to DNS caching. 🧠⚡
+
+Wanna test yourself : DNS Quiz (Online) - Networkwalks Academy
+
+
+HTTP in Detail :
+
+What is HTTP? (HyperText Transfer Protocol)
+HTTP is what's used whenever you view a website, developed by Tim Berners-Lee and his team between 1989-1991. HTTP is the set of rules used for communicating with web servers for the transmitting of webpage data, whether that is HTML, Images, Videos, etc.
+
+What is HTTPS? (HyperText Transfer Protocol Secure)
+HTTPS is the secure version of HTTP. HTTPS data is encrypted so it not only stops people from seeing the data you are receiving and sending, but it also gives you assurances that you're talking to the correct web server and not something impersonating it
+When we access a website, your browser will need to make requests to a web server for assets such as HTML, Images, and download the responses. Before that, you need to tell the browser specifically how and where to access these resources, this is where URLs will help.
+
+What is a URL? (Uniform Resource Locator)
+If you’ve used the internet, you’ve used a URL before. A URL is predominantly an instruction on how to access a resource on the internet. The below image shows what a URL looks like with all of its features (it does not use all features in every request).
+
+
+
+Scheme: This instructs on what protocol to use for accessing the resource such as HTTP, HTTPS, FTP (File Transfer Protocol).
+User: Some services require authentication to log in, you can put a username and password into the URL to log in.
+Host: The domain name or IP address of the server you wish to access.
+Port: The Port that you are going to connect to, usually 80 for HTTP and 443 for HTTPS, but this can be hosted on any port between 1 - 65535.
+Path: The file name or location of the resource you are trying to access.
+Query String: Extra bits of information that can be sent to the requested path. For example, /blog?id=1 would tell the blog path that you wish to receive the blog article with the id of 1.
+Fragment: This is a reference to a location on the actual page requested. This is commonly used for pages with long content and can have a certain part of the page directly linked to it, so it is viewable to the user as soon as they access the page.
+
+Making a Request -_>
+It's possible to make a request to a web server with just one line GET / HTTP/1.1
+
+
+But for a much richer web experience, you’ll need to send other data as well. This other data is sent in what is called headers, where headers contain extra information to give to the web server you’re communicating with, but we’ll go more into this in the Header task.
+
+
+
+
+
+
+Example Request:
+GET / HTTP/1.1
+
+
+Host: tryhackme.com
+User-Agent: Mozilla/5.0 Firefox/87.0
+Referer: https://tryhackme.com/
+
+
+
+To breakdown each line of this request:
+Line 1: This request is sending the GET method ( more on this in the HTTP Methods task ), request the home page with / and telling the web server we are using HTTP protocol version 1.1.
+Line 2: We tell the web server we want the website tryhackme.com
+Line 3: We tell the web server we are using the Firefox version 87 Browser
+Line 4: We are telling the web server that the web page that referred us to this one is https://tryhackme.com
+Line 5: HTTP requests always end with a blank line to inform the web server that the request has finished.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example Response:
+
+HTTP/1.1 200 OK
+
+
+Server: nginx/1.15.8
+Date: Fri, 09 Apr 2021 13:34:03 GMT
+Content-Type: text/html
+Content-Length: 98
+
+
+
+<html>
+<head>
+    <title>TryHackMe</title>
+</head>
+<body>
+    Welcome To TryHackMe.com
+</body>
+</html>
+
+To breakdown each line of the response:
+Line 1: HTTP 1.1 is the version of the HTTP protocol the server is using and then followed by the HTTP Status Code in this case "200 OK" which tells us the request has completed successfully.
+Line 2: This tells us the web server software and version number.
+Line 3: The current date, time and timezone of the web server.
+Line 4: The Content-Type header tells the client what sort of information is going to be sent, such as HTML, images, videos, pdf, XML.
+Line 5: Content-Length tells the client how long the response is, this way we can confirm no data is missing.
+Line 6: HTTP response contains a blank line to confirm the end of the HTTP response.
+Lines 7-14: The information that has been requested, in this instance the homepage.
+
+HTTP METHODS 
+HTTP methods are a way for the client to show their intended action when making an HTTP request. There are a lot of HTTP methods but we'll cover the most common ones, although mostly you'll deal with the GET and POST method
+	OR 
+HTTP methods = a way for your browser (client) to tell the server what it wants to do — like get data, send data, update, or delete something.
+
+The commonly used requests are : 
+
+GET Request
+This is used for getting information from a web server.
+
+
+POST Request
+This is used for submitting data to the web server and potentially creating new records
+	Or 
+POST is used to send data to the web server — usually to submit forms or create something new (like a user account, comment, etc).
+
+PUT Request
+This is used for submitting data to a web server to update information
+DELETE Request
+This is used for deleting information/records from a web server.
+
+🔧 PATCH
+➡️ Used to update part of something (not the whole thing).
+🧪 Example: Change only your profile picture.
+
+🕵️ HEAD
+➡️ Used to check if something exists, but don’t download the content.
+🧪 Example: Check if a file is there without loading it.
+
+SOME REAL LIFE EXAMPLES FOR THESE HTTP METHODS 
+
+✅ 1. GET — Just view something
+🎯 Real-life example:
+🧍 You → Open https://tryhackme.com in your browser
+📡 Your browser sends a GET request
+🖥️ Server sends back the homepage (HTML, CSS, etc.)
+📄 You see the content, but nothing is changed or sent from you.
+
+✅ 2. POST — Send new data
+🎯 Real-life example:
+🧍 You → Fill and submit a sign-up form on TryHackMe
+📨 Your browser sends a POST request with your name, email, password
+💾 Server stores that info in the database
+📂 A new user account is created
+
+✅ 3. PUT — Replace existing data
+🎯 Real-life example:
+🧍 You → Go to your profile and edit your entire account info
+🧾 You enter new name, email, profile picture
+📡 Browser sends a PUT request with the full new data
+💾 Server overwrites your old profile with the new one
+
+✅ 4. PATCH — Change part of something
+🎯 Real-life example:
+🧍 You → Click “Change Password” on a website
+🔐 You enter only the new password
+📡 Browser sends a PATCH request with just the password
+💾 Server updates only the password in your profile
+✅ 5. DELETE — Remove something
+🎯 Real-life example:
+🧍 You → Click “Delete my comment” on a post
+📡 Browser sends a DELETE request to the server
+🗑️ Server removes that comment from the database 
+📂 It’s gone forever
+
+
+HTTP Status Codes:
+100-199 - Information Response
+These are sent to tell the client the first part of their request has been accepted and they should 
+continue sending the rest of their request. These codes are no longer very common.
+200-299 - Success
+This range of status codes is used to tell the client their request was successful.
+300-399 - Redirection
+These are used to redirect the client's request to another resource. This can be either to a 
+different webpage or a different website altogether.
+400-499 - Client Errors
+Used to inform the client that there was an error with their request.
+500-599 - Server Errors
+This is reserved for errors happening on the server-side and usually indicate quite a major 
+problem with the server handling the request.
+
+In the previous task, you learnt that when a HTTP server responds, the first line always contains a status code informing the client or browser
+ of the outcome of their request and also potentially how to handle it. These status codes can be broken down into 5 different ranges:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Common HTTP Status Codes:
+There are a lot of different HTTP status codes and that's not including the fact that applications can even define their own, we'll go over the most common HTTP responses you are likely to come across:
+200 - OK
+The request was completed successfully.
+201 - Created
+A resource has been created (for example a new user or new blog post).
+301 - Moved Permanently
+This redirects the client's browser to a new webpage or tells search engines that the page has 
+moved somewhere else and to look there instead.
+302 - Found
+Similar to the above permanent redirect, but as the name suggests, this is only a temporary 
+change and it may change again in the near future.
+400 - Bad Request
+This tells the browser that something was either wrong or missing in their request. This could 
+sometimes be used if the web server resource that is being requested expected a certain
+ parameter that the client didn't send.
+401 - Not Authorised
+You are not currently allowed to view this resource until you have authorised with the web 
+application, most commonly with a username and password.
+403 - Forbidden
+You do not have permission to view this resource whether you are logged in or not.
+405 - Method Not Allowed
+The resource does not allow this method request, for example, you send a GET request to the 
+resource /create-account when it was expecting a POST request instead.
+404 - Page Not Found
+The page/resource you requested does not exist.
+500 - Internal Service Error
+The server has encountered some kind of error with your request that it doesn't know how to 
+handle properly.
+503 - Service Unavailable
+This server cannot handle your request as it's either overloaded or down for maintenance.
+
+
+
+
+
+
+
+
+
+
+
+Headers are additional bits of data you can send to the web server when making requests.
+Although no headers are strictly required when making a HTTP request, you’ll find it difficult to view a website properly.
+
+Common Request Headers
+﻿
+These are headers that are sent from the client (usually your browser) to the server.
+Host: Some web servers host multiple websites so by providing the host headers you can tell it which one you require, otherwise you'll just receive the default website for the server.
+
+HOST — Tell the server which website you want
+🎯 Real-life example:
+🧍 You type https://cyberdemon.tech in your browser
+📡 Browser sends a request with:
+GET /HTTP/1.1  
+Host: cyberdemon.tech
+🖥️ The server is hosting multiple websites (like cyberdemon.tech, poboy.tech, etc.)
+📂 It checks the Host header and says:
+"Ah! He wants the Cyber Demon site."
+⚡ You get the correct page!
+
+❌ If Host header is missing:
+🧍 Your browser just says:
+GET / HTTP/1.1
+🖥️ Server says:
+"Uhh... you didn’t say which site you want, so here’s the default one."
+🚫 You might see the wrong site, an error, or a generic page.
+
+
+
+
+User-Agent: This is your browser software and version number, telling the web server your browser software helps it format the website properly for your browser and also some elements of HTML, JavaScript and CSS are only available in certain browsers.
+
+USER-AGENT — Tells the server what device or browser you're using
+🎯 Real-life example:
+🧍 You open https://tryhackme.com using Firefox on Windows
+📡 Your browser sends:
+GET / HTTP/1.1  
+Host: tryhackme.com  
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:87.0) Firefox/87.0
+🖥️ Server looks at the User-Agent and says:
+"Cool, he's using Firefox on a PC — let me send a version that works perfectly for him."
+⚙️ Sometimes, the server:
+Sends a mobile version if you're on a phone
+Blocks old browsers
+Tracks analytics (which browser is most used)
+
+🕵️ Hack Tip:
+You can spoof the User-Agent to pretend you're:
+Googlebot (for crawling pages)
+A mobile device (to get mobile layout)
+Another browser (to bypass some blocks)
+
+
+
+
+
+
+Content-Length: When sending data to a web server such as in a form, the content length tells the web server how much data to expect in the web request. This way the server can ensure it isn't missing any data.
+
+CONTENT-LENGTH — Tells how big the body of the message is (in bytes)
+🎯 Real-life example:
+🧍 You fill a login form and click "Submit"
+📡 Your browser sends:
+POST /login HTTP/1.1  
+Host: tryhackme.com  
+Content-Length: 38  
+📦 Body:
+username=jon&password=cyberking
+🖥️ Server sees Content-Length: 38 and knows:
+"Alright, I’m expecting 38 bytes of data from the user."
+
+🧠 Why it matters?
+📦 Server needs to know when the body ends
+🧰 Required for POST, PUT, PATCH requests
+🧪 Used to validate and prevent incomplete uploads
+
+🕵️ Hacker Tip:
+In some attacks (like HTTP smuggling), you can manipulate Content-Length to trick the server 😈
+
+
+
+
+
+
+
+Accept-Encoding: Tells the web server what types of compression methods the browser supports so the data can be made smaller for transmitting over the internet.
+Accept-Encoding — Tells the server what kind of compression your browser can handle
+
+🎯 Real-life example:
+🧍 You visit https://tryhackme.com
+📡 Your browser sends this header:
+Accept-Encoding: gzip, deflate, br
+🖥️ Server says:
+"Ah, your browser accepts compressed content — I’ll send a smaller, faster version using gzip!"
+⚡ Result: Page loads faster because it's compressed ✅
+
+🔧 Common encodings:
+gzip → Most common compression
+br → Brotli (better compression for modern browsers)
+deflate → Older method
+
+🧠 Why it's useful?
+⚡ Saves bandwidth
+📱 Speeds up page load
+📦 Delivers smaller files
+
+
+
+
+
+
+
+
+
+
+Cookie: Data sent to the server to help remember your information (see cookies task for more information).
+COOKIE — Stores small pieces of data in your browser to remember you
+
+🎯 Real-life example:
+🧍 You log in to tryhackme.com
+🖥️ Server replies with:
+Set-Cookie: session_id=abc123; Path=/; HttpOnly
+📦 Your browser saves this cookie (like a name tag)
+📡 Next time you visit, your browser sends:
+Cookie: session_id=abc123
+🖥️ Server says:
+"Ahh! This is Jon. Welcome back, Cyber Demon 😈"
+✅ You stay logged in without entering your credentials again.
+
+🔧 What cookies are used for:
+🔐 Login sessions
+🛒 Shopping cart memory
+🎯 Tracking (like ads or analytics)
+🌐 Remembering preferences (dark mode, language)
+
+🕵️ Hacker Tip:
+Cookies can contain session tokens, which hackers may try to steal using:
+XSS attacks
+Session hijacking
+So always protect your cookies with HttpOnly and Secure flags 🔐
+
+
+
+
+Common Response Headers
+
+These are the headers that are returned to the client from the server after a request.
+
+
+Set-Cookie: Information to store which gets sent back to the web server on each request (see cookies task for more information).
+
+Set-Cookie
+It's a response header that a server sends to your browser to store a cookie.
+
+🎯 Real-life example:
+🖥️ Server says:
+Set-Cookie: session_id=abc123; Path=/; HttpOnly
+📦 Your browser saves:
+session_id=abc123
+🧠 So the next time you visit, your browser sends it back like:
+Cookie: session_id=abc123
+✅ This lets the server remember you, like staying logged in or saving preferences.
+
+
+
+
+
+
+
+
+
+
+
+Cache-Control: How long to store the content of the response in the browser's cache before it requests it again.
+
+Cache-Control
+It tells browsers or proxies whether to store (cache) a response — and for how long.
+
+🎯 Real-life example:
+🖥️ Server sends:
+Cache-Control: max-age=3600
+📦 Browser understands:
+“I can store this page for 1 hour (3600 seconds) and use it without reloading from the server.”
+✅ Result: Faster loading, less internet usage.
+
+🔧 Common values:
+Header
+Meaning
+no-cache
+Always check with server before using
+no-store
+Never save this data (sensitive info)
+max-age=3600
+Cache it for 1 hour
+public / private
+Who can cache it (anyone or just browser)
+
+
+
+
+
+
+
+
+
+
+
+Content-Type: This tells the client what type of data is being returned, i.e., HTML, CSS, JavaScript, Images, PDF, Video, etc. Using the content-type header the browser then knows how to process the data.
+
+Content-Type
+It tells what kind of data is being sent (like HTML, JSON, image, etc.)
+
+🎯 Real-life example:
+🖥️ Server sends:
+Content-Type: text/html
+📄 Browser knows: "This is an HTML webpage. I'll render it!"
+🖥️ Or:
+Content-Type: application/json
+📦 Browser/tool knows: "This is JSON data. I’ll treat it like an API response."
+
+🔧 Common types:
+Type
+Meaning
+text/html
+Webpage
+application/json
+API data
+text/css
+Stylesheet
+image/png
+Image file
+application/javascript
+JS script
+
+
+
+
+
+
+
+
+
+
+
+
+Content-Encoding: What method has been used to compress the data to make it smaller when sending it over the internet.
+
+Content-Encoding
+It tells how the response data is compressed before sending.
+
+🎯 Real-life example:
+🖥️ Server sends:
+Content-Encoding: gzip
+📦 Browser knows:
+“The data is compressed using gzip — I’ll unzip it before showing.”
+✅ This makes web pages load faster by reducing size!
+
+🔧 Common encodings:
+Encoding
+Meaning
+gzip
+Standard compression
+br
+Brotli (newer, faster)
+deflate
+Older compression
+
+
+
+
+
+
+COOKIES 🍪
+You've probably heard of cookies before, they're just a small piece of data that is stored on your computer. Cookies are saved when you receive a "Set-Cookie" header from a web server. Then every further request you make, you'll send the cookie data back to the web server. Because HTTP is stateless (doesn't keep track of your previous requests), cookies can be used to remind the web server who you are, some personal settings for the website or whether you've been to the website before. Let's take a look at this as an example HTTP request:
+
+
+Cookies can be used for many purposes but are most commonly used for website authentication. The cookie value won't usually be a clear-text string where you can see the password, but a token (unique secret code that isn't easily humanly guessable).
+You can easily view what cookies your browser is sending to a website by using the developer tools, in your browser. If you're not sure how to get to the developer tools in your browser .
+
+Chrome
+To open the developer tools in Chrome, click the  Chrome Menu icon on the top right of the browser. Then, select More Tools. In the submenu, choose Developer Tools.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Once you have developer tools open, click on the "Network" tab. This tab will show you a list of all the resources your browser has requested. You can click on each one to receive a detailed breakdown of the request and response. If your browser sent a cookie, you will see these on the "Cookies" tab of the request.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HOW WEBSITES WORK :
+
+By the end of this room, you'll know how websites are created and will be introduced to some basic security issues.
+
+
+When you visit a website, your browser (like Safari or Google Chrome) makes a request to a web server asking for information about the page you're visiting. It will respond with data that your browser uses to show you the page; a web server is just a dedicated computer somewhere else in the world that handles your requests.
+
+There are two major components that make up a website:
+Front End (Client-Side) - the way your browser renders a website.
+Back End (Server-Side) - a server that processes your request and returns a response.
+There are many other processes involved in your browser making a request to a web server, but for now, you just need to understand that you make a request to a server, and it responds with data your browser uses to render information to you
+
+
+
+
+
+HTML :
+Websites are primarily created using:
+HTML, to build websites and define their structure
+CSS, to make websites look pretty by adding styling options
+JavaScript, implement complex features on pages using interactivity
+HyperText Markup Language (HTML) is the language websites are written in. Elements (also known as tags) are the building blocks of HTML pages and tells the browser how to display content. The code snippet below shows a simple HTML document, the structure of which is the same for every website:
+
+The HTML structure (as shown in the screenshot) has the following components:
+The <!DOCTYPE html> defines that the page is a HTML5 document. This helps with standardisation across different browsers and tells the browser to use HTML5 to interpret the page.
+The <html> element is the root element of the HTML page - all other elements come after this element.
+The <head> element contains information about the page (such as the page title)
+The <body> element defines the HTML document's body; only content inside of the body is shown in the browser.
+The <h1> element defines a large heading
+The <p> element defines a paragraph
+There are many other elements (tags) used for different purposes. For example, there are tags for buttons (<button>), images (<img>), lists, and much more. 
+
+
+Tags can contain attributes such as the class attribute which can be used to style an element (e.g. make the tag a different color) <p class="bold-text">, or the src attribute which is used on images to specify the location of an image: <img src="img/cat.jpg">.An element can have multiple attributes each with its own unique purpose, e.g., <p attribute1="value1" attribute2="value2">.
+Elements can also have an id attribute (<p id="example">), which is unique to the element. Unlike the class attribute, where multiple elements can use the same class, an element must have different id's to identify them uniquely. Element id's are used for styling and to identify it by JavaScript.
+
+
+
+
+
+JAVA SCRIPT :
+
+JavaScript (JS) is one of the most popular coding languages in the world and allows pages to become interactive. HTML is used to create the website structure and content, while JavaScript is used to control the functionality of web pages - without JavaScript, a page would not have interactive elements and would always be static. JS can dynamically update the page in real-time, giving functionality to change the style of a button when a particular event on the page occurs (such as when a user clicks a button) or to display moving animations.
+JavaScript is added within the page source code and can be either loaded within <script> tags or can be included remotely with the src attribute: <script src="/location/of/javascript_file.js"></script>
+The following JavaScript code finds a HTML element on the page with the id of "demo" and changes the element's contents to "Hack the Planet" 
+: document.getElementById("demo").innerHTML = "Hack the Planet";
+
+HTML elements can also have events, such as "onclick" or "onhover" that execute JavaScript when the event occurs. The following code changes the text of the element with the demo ID to Button Clicked: <button onclick='document.getElementById("demo").innerHTML = "Button Clicked";'>Click Me!</button> - onclick events can also be defined inside the JavaScript script tags, and not on elements directly. 
+SENSITIVE DATA EXPOSURE :
+
+ Sensitive Data Exposure occurs when a website doesn't properly protect (or remove) sensitive clear-text information to the end-user; usually found in a site's frontend source code.
+We now know that websites are built using many HTML elements (tags), all of which we can see simply by "viewing the page source". A website developer may have forgotten to remove login credentials, hidden links to private parts of the website or other sensitive data shown in HTML or JavaScript.
+
+
+Sensitive information can be potentially leveraged to further an attacker's access within different parts of a web application. For example, there could be HTML comments with temporary login credentials, and if you viewed the page's source code and found this, you could use these credentials to log in elsewhere on the application (or worse, used to access other backend components of the site).
+Whenever you're assessing a web application for security issues, one of the first things you should do is review the page source code to see if you can find any exposed login credentials or hidden links.
+
+
+
+
+
+HTML INJECTION :
+
+HTML Injection is a vulnerability that occurs when unfiltered user input is displayed on the page. If a website fails to sanitise user input (filter any "malicious" text that a user inputs into a website), and that input is used on the page, an attacker can inject HTML code into a vulnerable website.
+Input sanitisation is very important in keeping a website secure, as information a user inputs into a website is often used in other frontend and backend functionality. A vulnerability you'll explore in another lab is database injection, where you can manipulate a database lookup query to log in as another user by controlling the input that's directly used in the query - but for now, let's focus on HTML injection (which is client-side).
+When a user has control of how their input is displayed, they can submit HTML (or JavaScript) code, and the browser will use it on the page, allowing the user to control the page's appearance and functionality.
+
+The image above shows how a form outputs text to the page. Whatever the user inputs into the "What's your name" field is passed to a JavaScript function and output to the page, which means if the user adds their own HTML or JavaScript in the field, it's used in the sayHi function and is added to the page - this means you can add your own HTML (such as a <h1> tag) and it will output your input as pure HTML.
+The general rule is never to trust user input. To prevent malicious input, the website developer should sanitise everything the user enters before using it in the JavaScript function; in this case, the developer could remove any HTML tags.
+
+
+
+
+EXPLAINED BY [ THE GOD ] :
+Hey, so basically this is when an attacker adds HTML to a page in order to make it do something it wouldn’t regularly. For example, if the page takes username/password it will normally include a POST request to take input from the user. An attacker may alter the POST request or add an additional one to forward the credentials you enter on the web page to the attackers server. This would be difficult to detect as a user since on their end the webpage would look exactly the same.
+A lot of the web based attacks are about finding ways to force unintended input
+
+Any page where the web page can receive input is a possible target, like a login page, account creation, password recovery, etc.
+
+this can also include search bars as well…
+
+HTML ( breakdown )
+
+Code : [  <a href = "https://google.com" > hi</a> ] 
+
+
+1. <a
+This is the start of an anchor tag.
+a stands for anchor.
+Used to define a link in HTML.
+
+2. href
+Short for Hypertext REFerence.
+This is an attribute inside the anchor tag.
+It tells the browser where the link should go.
+
+3. =
+Used to assign a value to the href attribute.
+Think of it like: href = "value"
+
+
+4. "https://google.com"
+This is the value assigned to href.
+It is the URL you want the link to open when clicked.
+In this case, it will go to Google's website.
+
+
+5. >
+This marks the end of the opening <a> tag.
+Everything after this, until </a>, is the clickable text.
+
+6. hi
+This is the text shown to the user.
+When the user sees the webpage, they’ll see the word "hi" as a clickable link.
+You can replace this with anything like "Click me", "Google", etc.
+
+7. </a>
+This is the closing anchor tag.
+It tells the browser: "End of the link".
+Everything between <a> and </a> is clickable.
+
+
+
+
+
+PUTTING ALL TOGETHER :
+From the previous modules , you’ll have learned that quite a lot of things go on behind the scenes when you request a webpage in your browser.
+
+To summarise , when you request a website , your computer needs to know the server’s IP address it needs to talk to; for this , it uses DNS . Your computer then talks to the web server using a special set of commands called the HTTP protocol ; the webserver then returns HTML , Java Script , CSS , Images, etc ., which your browser then uses to correctly format and display the website to u ..
+
+
+
+
+Other Components :
+
+LOAD BALANCERS :
+When a website gets lots of visitors or needs to always stay online, one server might not be enough. That’s where a load balancer comes in.
+
+A load balancer sits in front of multiple servers. When you visit the site, your request goes to the load balancer first. It then chooses the best server to handle your request.
+
+
+It uses smart rules (called algorithms) like:
+
+Round-robin – sends each request to the next server in line, one by one.
+Least connections (weighted) – sends the request to the server that’s handling the fewest people right now.
+
+This helps:
+Split the traffic so no server gets overloaded.
+Keep the website running even if one server fails.
+
+
+
+
+
+
+
+CDN (Content Delivery Networks) :
+A CDN ( Content Delivery Network ) helps reduce traffic and speed up websites by storing static files ( like images , videos , Java script ,CSS ) on many servers around the world .
+
+When a user visits your site , the CDN finds the closest server to the user and delivers the file from there – instead of from a faraway server. This makes the site load faster and reduces the load on your main server.
+
+QUESTION : 
+So does it actually take the data from the main server to the closest server to the user and then send the data to us from the closest server ?
+--------------------------------------------------------------------------------------------------------------------------------------
+ANS :
+✅ First Time: When a file (like an image or video) is not yet on the nearby CDN server, the CDN fetches it from your main server, stores a copy, and then sends it to the user.
+✅ Next Time: If someone else nearby requests the same file, the CDN already has it cached, so it delivers it instantly from the closest server — no need to ask the main server again.
+So in short:
+The first time = main server → CDN → user
+After that = CDN (nearest server) → user
+This is how CDNs save time and reduce load on the main server.
+
+Databases :
+Often websites will need a way of storing information for their users. Webservers can communicate with databases to store and recall data from them.
+
+ Databases can range from just a simple plain text file up to complex clusters of multiple servers providing speed and resilience. 
+
+You'll come across some common databases: MySQL, MSSQL, MongoDB, Postgres, and more; each has its specific features.
+
+
+
+
+
+
+WAF (Web Application Firewall) :
+A WAF sits between your web request and the web server; its primary purpose is to protect the webserver from hacking or denial of service attacks. It analyses the web requests for common attack techniques, whether the request is from a real browser rather than a bot.
+
+It also checks if an excessive amount of web requests are being sent by utilising something called rate limiting, which will only allow a certain amount of requests from an IP per second. 
+
+If a request is deemed a potential attack, it will be dropped and never sent to the webserver.
+
+
+
+
+
+
+
+
+
+
+
+
+How Web servers work :
+What is a Web Server?
+
+
+A web server is a software that listens for incoming connections and then utilises the HTTP protocol to deliver web content to its clients. The most common web server software you'll come across is Apache, Nginx, IIS and NodeJS. A Web server delivers files from what's called its root directory, which is defined in the software settings. For example, Nginx and Apache share the same default location of /var/www/html in Linux operating systems, and IIS uses C:\inetpub\wwwroot for the Windows operating systems. So, for example, if you requested the file http://www.example.com/picture.jpg, it would send the file /var/www/html/picture.jpg from its local hard drive ..
+
+Virtual Hosts ?
+🖥️ A web server can host many websites (with different domain names) using something called virtual hosts.
+When someone visits a website:
+The browser sends the domain name (like one.com) in the HTTP request.
+The web server checks its virtual host config files (just text files) to find a match.
+If it matches (like one.com), it serves files from the correct folder (e.g., /var/www/website_one).
+If it doesn't find a match, it shows the default website.
+✅ Example:
+one.com → /var/www/website_one
+two.com → /var/www/website_two
+🔁 There’s no limit to how many websites you can host this way — as long as your server has the resources!
+
+
+
+
+
+
+
+
+QUESTION :  Virtual host means is it like hostinger or go daddy kinda stuff ???
+
+ANS : 
+❓ Is Virtual Host like Hostinger or GoDaddy?
+Not exactly.
+Hostinger or GoDaddy are web hosting companies (services).
+A Virtual Host is a feature of a web server (like Apache or Nginx) that lets you host multiple websites on one server (even one IP address).
+
+🔄 Simple comparison:
+Thing
+What it is
+Example
+Virtual Host
+A configuration inside a web server to host multiple websites on one machine.
+Host one.com and two.com on same server using Apache.
+Hostinger / GoDaddy
+Companies that offer hosting services — they might use virtual hosts behind the scenes.
+You buy hosting from Hostinger, and they use virtual hosts to give you your space.
+
+
+💡 Think of it like:
+A web server = apartment building
+A virtual host = each flat inside the building (each website has its own space)
+Hostinger/GoDaddy = the company that rents out flats (hosting services) and manages the building
+
+
+
+
+
+
+
+
+
+
+Static Vs Dynamic Content ?
+
+Static content, as the name suggests, is content that never changes. Common examples of this are pictures, javascript, CSS, etc., but can also include HTML that never changes. Furthermore, these are files that are directly served from the webserver with no changes made to them.
+Dynamic content, on the other hand, is content that could change with different requests. Take, for example, a blog. On the homepage of the blog, it will show you the latest entries. If a new entry is created, the home page is then updated with the latest entry, or a second example might be a search page on a blog. Depending on what word you search, different results will be displayed.
+These changes to what you end up seeing are done in what is called the Backend with the use of programming and scripting languages. It's called the Backend because what is being done is all done behind the scenes. You can't view the websites' HTML source and see what's happening in the Backend, while the HTML is the result of the processing from the Backend. Everything you see in your browser is called the Frontend.
+
+
+Scripting and Backend Languages ??
+
+
+There's not much of a limit to what a backend language can achieve, and these are what make a website interactive to the user. Some examples of these languages (in no particular order :p) are PHP, Python, Ruby, NodeJS, Perl and many more. These languages can interact with databases, call external services, process data from the user, and so much more. A very basic PHP example of this would be if you requested the website http://example.com/index.php?name=adam
+
+
+
+If index.php was built like this:
+<html><body>Hello <?php echo $_GET["name"]; ?></body></html>
+It would output the following to the client:
+<html><body>Hello adam</body></html>
+You'll notice that the client doesn't see any PHP code because it's on the Backend. This interactivity opens up a lot more security issues for web applications that haven't been created securely, as you learn in further modules.
+
+
+
+
+     Linux Fundamentals Part 1
+
+Welcome to the first part of the "Linux Fundamentals" room series. You're most likely using a Windows or Mac machine, both are different in visual design and how they operate. Just like Windows, iOS and MacOS, Linux is just another operating system and one of the most popular in the world powering smart cars, android devices, supercomputers, home appliances, enterprise servers, and more.
+We'll be covering some of the history behind Linux and then eventually starting your journey of being a Linux-wizard! This room will have you:
+Running your very first commands in an interactive Linux machine in your browser
+Teaching you some essential commands used to interact with the file system
+Demonstrate how you can search for files and introduce shell operators
+
+Where is Linux Used?
+It's fair to say that Linux is a lot more intimidating to approach than Operating System's (OSs) such as Windows. Both variants have their own advantages and disadvantages. For example, Linux is considerably much more lightweight and you'd be surprised to know that there's a good chance you've used Linux in some form or another every day! Linux powers things such as:
+Websites that you visit
+Car entertainment/control panels
+Point of Sale (PoS) systems such as checkout tills and registers in shops
+Critical infrastructures such as traffic light controllers or industrial sensors
+
+
+
+
+
+
+
+
+Flavours of Linux
+The name "Linux" is actually an umbrella term for multiple OS's that are based on UNIX (another operating system). Thanks to Linux being open-source, variants of Linux come in all shapes and sizes - suited best for what the system is being used for.
+For example, Ubuntu & Debian are some of the more commonplace distributions of Linux because it is so extensible. I.e. you can run Ubuntu as a server (such as websites & web applications) or as a fully-fledged desktop. For this series, we're going to be using Ubuntu.
+Note: Ubuntu Server can run on systems with only 512MB of RAM!
+Similar to how you have different versions Windows (7, 8 and 10), there are many different versions/distributions of Linux.
+
+As we previously discussed, a large selling point of using OSs such as Ubuntu is how lightweight they can be. This, of course, doesn't come without its disadvantages, where for example, often there is no GUI (Graphical User Interface) or what is also known as a desktop environment that we can use to interact with the machine (unless it has been installed). A large part of interacting with these systems is using the "Terminal".
+The "Terminal" is purely text-based and is intimidating at first. However, if we break down some of the commands, after some time, you quickly become familiar with using the terminal!
+
+We need to be able to do basic functions like navigate to files, output their contents and make files! The commands to do so are self-explanatory (once you know what they are of course...)
+Let's get started with two of the first commands which I have broken down in the table below:
+Command
+Description
+echo
+Output any text that we provide
+whoami
+Find out what user we're currently logged in as!
+
+
+So far we've only covered the "echo" and "whoami" commands. Not all that useful when you consider things that we need to do - including navigating the filesystem, read and write to it as well.
+In this task, we're going to be learning the commands so that we can do just that. Just like the previous task, I'll display the commands in the table in the next heading & show examples of these commands being used.
+ 
+Interacting With the Filesystem
+ 
+As I previously stated, being able to navigate the machine that you are logged into without relying on a desktop environment is pretty important. After all, what's the point of logging in if we can't go anywhere?
+Command
+Full Name
+ls
+listing
+cd
+change directory
+cat
+concatenate
+pwd
+print working directory
+
+ 
+Listing Files in Our Current Directory (ls)
+ 
+Before we can do anything such as finding out the contents of any files or folders, we need to know what exists in the first place. This can be done using the "ls" command (short for listing)
+
+
+In the screenshot above, we can see there are the following directories/folders:
+Important Files
+My Documents
+Notes
+Pictures
+ 
+Great! You can probably take a guess as to what to expect a folder to contain given by its name.
+Pro tip: You can list the contents of a directory without having to navigate to it by using ls and the name of the directory. I.e. ls Pictures
+
+Changing Our Current Directory (cd)
+ 
+Now that we know what folders exist, we need to use the "cd" command (short for change directory) to change to that directory. Say if I wanted to open the "Pictures" directory - I'd do "cd Pictures". Where again, we want to find out the contents of this "Pictures" directory and to do so, we'd use "ls" again:
+
+In this case, it looks like there are 4 pictures of dogs!
+ 
+Outputting the Contents of a File (cat)
+Whilst knowing about the existence of files is great — it's not all that useful unless we're able to view the contents of them.
+We will come on to discuss some of the tools available to us that allows us to transfer files from one machine to another in a later room. But for now, we're going to talk about simply seeing the contents of text files using a command called "cat".
+"Cat" is short for concatenating & is a fantastic way for us to output the contents of files (not just text files!).
+In the screenshot below, you can see how I have combined the use of "ls" to list the files within a directory called "Documents":
+
+We've applied some knowledge from earlier in this task to do the following:
+Used "ls" to let us know what files are available in the "Documents" folder of this machine. In this case, it is called "todo.txt".
+We have then used cat todo.txt to concatenate/output the contents of this "todo.txt" file, where the contents are "Here's something important for me to do later!"
+Pro tip: You can use cat to output the contents of a file within directories without having to navigate to it by using cat and the name of the directory. I.e. cat /home/ubuntu/Documents/todo.txt
+ 
+Sometimes things like usernames, passwords (yes - really...), flags or configuration settings are stored within files where "cat" can be used to retrieve these.
+Finding out the full Path to our Current Working Directory (pwd)
+You'll notice as you progress through navigating your Linux machine, the name of the directory that you are currently working in will be listed in your terminal.
+It's easy to lose track of where we are on the filesystem exactly, which is why I want to introduce "pwd". This stands for print working directory.
+Using the example machine from before, we are currently in the "Documents" folder — but where is this exactly on the Linux machine's filesystem? We can find this out using this "pwd" command like within the screenshot below:
+
+
+Let's break this down:
+We already know we're in "Documents" thanks to our terminal, but at this point in time, we have no idea where "Documents" is stored so that we can get back to it easily in the future.
+I have used the "pwd" (print working directory) command to find the full file path of this "Documents" folder.
+We're helpfully told by Linux that this "Documents" directory is stored at "/home/ubuntu/Documents" on the machine — great to know!
+Now in the future, if we find ourselves in a different location, we can just use cd /home/ubuntu/Documents to change our working directory to this "Documents" directory.
+
+
+
+
+
+
+
+
+
+Although it doesn't seem like it so far, one of the redeeming features of Linux is truly how efficient you can be with it. With that said, you can only be as efficient as you are familiar with it of course. As you interact with OSs such as Ubuntu over time, essential commands like those we've already covered will start to become muscle-memory.
+One fantastic way to show just how efficient you can be with systems like this is using a set of commands to quickly search for files across the entire system that our user has access to. No need to consistently use cd and ls to find out what is where. Instead, we can use commands such as find to automate things like this for us!
+This is where Linux starts to become a bit more intimidating to approach -- but we'll break this down and ease you into it.
+Using Find
+The find command is fantastic in the sense that it can be used both very simply or rather complex depending upon what it is you want to do exactly. However, let's stick to the fundamentals first.
+Take the snippet below; we can see a list of directories available to us:
+
+
+
+Desktop
+Documents
+Pictures
+folder1
+
+Now, of course, directories can contain even more directories within themselves. It becomes a headache when we're having to look through every single one just to try and look for specific files. We can use find to do just this for us!
+Let's start simple and assume that we already know the name of the file we're looking for — but can't remember where it is exactly! In this case, we're looking for "passwords.txt"
+If we remember the filename, we can simply use find -name passwords.txt where the command will look through every folder in our current directory for that specific file like so:
+
+
+
+"Find" has managed to find the file — it turns out it is located in folder1/passwords.txt — sweet. But let's say that we don't know the name of the file, or want to search for every file that has an extension such as ".txt". Find let's us do that too!
+We can simply use what's known as a wildcard (*) to search for anything that has .txt at the end. In our case, we want to find every .txt file that's in our current directory. We will construct a command such as find -name *.txt . Where "Find" has been able to find every .txt file and has then given us the location of each one:
+
+
+
+Find has managed to find:
+"passwords.txt" located within "folder1"
+"todo.txt" located within "Documents"
+That wasn't so tough, huh!
+
+Using Grep
+Another great utility that is a great one to learn about is the use of grep. The grep command allows us to search the contents of files for specific values that we are looking for.
+Take for example, the access log of a web server. In this case, the access.log of a web server has 244 entries. 
+
+Using a command like cat isn't going to cut it too well here. Let's say for example if we wanted to search this log file to see the things that a certain user/IP address visited? Looking through 244 entries isn't all that efficient  considering we want to find a specific value.
+We can use grep to search the entire contents of this file for any entries of the value that we are searching for. Going with the example of a web server's access log, we want to see everything that the IP address "81.143.211.90" has visited (note that this is fictional)
+
+
+Explanation of Each Part:
+tryhackme@linux1:~$
+tryhackme → Username.
+@linux1 → Hostname (machine's name).
+:~ → Current directory (here, ~ means the home directory).
+$ → Standard prompt symbol for a regular (non-root) user.
+wc
+Command: Stands for "word count".
+Purpose: Counts lines, words, bytes, or characters in a file.
+-l
+Option/Flag: Counts only lines.
+Instead of counting everything, it filters to show line count.
+access.log
+File name: The file on which the command is run.
+In this case, it's a log file, probably from a web server.
+
+What Actually Happens?
+It shows how many lines are in access.log.
+Example Output:
+350 access.log
+That means access.log contains 350 lines.
+
+"Grep" has searched through this file and has shown us any entries of what we've provided and that is contained within this log file for the IP.
+Linux operators are a fantastic way to power up your knowledge of working with Linux. There are a few important operators that are worth noting. We'll cover the basics and break them down accordingly to bite-sized chunks.
+At an overview, I'm going to be showcasing the following operators:
+Symbol / Operator
+Description
+&
+This operator allows you to run commands in the background of your terminal.
+&&
+This operator allows you to combine multiple commands together in one line of your terminal.
+>
+This operator is a redirector - meaning that we can take the output from a command (such as using cat to output a file) and direct it elsewhere.
+>>
+This operator does the same function of the > operator but appends the output rather than replacing (meaning nothing is overwritten).
+
+Let's cover these in a bit more detail.
+
+
+Operator "&"
+This operator allows us to execute commands in the background. For example, let's say we want to copy a large file. This will obviously take quite a long time and will leave us unable to do anything else until the file successfully copies.
+The "&" shell operator allows us to execute a command and have it run in the background (such as this file copy) allowing us to do other things!
+Example : ls & cd ( directory ) 
+
+Operator "&&"
+This shell operator is a bit misleading in the sense of how familiar is to its partner "&". Unlike the "&" operator, we can use "&&" to make a list of commands to run for example command1 && command2. However, it's worth noting that command2 will only run if command1 was successful.
+
+Operator ">"
+This operator is what's known as an output redirector. What this  the output from a command we run and send that output to somewhere else.
+A great example of this is redirecting the output of the echo command that we learned in Task 4. Of course, running something such as echo howdy will return "howdy" back to our terminal — that isn't super useful. What we can do instead, is redirect "howdy" to something such as a new file!
+
+Let's say we wanted to create a file named "welcome" with the message "hey". 
+We can run echo hey > welcome where we want the file created with the contents "hey" like so: 
+
+
+Operator ">>"
+This operator is also an output redirector like in the previous operator (>) we discussed. However, what makes this operator different is that rather than overwriting any contents within a file, for example, it instead just puts the output at the end.
+Following on with our previous example where we have the file "welcome" that has the contents of "hey". If were to use echo to add "hello" to the file using the > operator, the file will now only have "hello" and not "hey".
+The >> operator allows to append the output to the bottom of the file — rather than replacing the contents like so:
+
+
+
+
+
+
+
+
+
+INTRODUCTION TO FLAGS AND SWITCHES 
+
+A majority of commands allow for arguments to be provided . These arguments are identified by a hyphen and a certain keyword known as flags or switches ..
+We will lates discuss how we can identify what commands allow for arguments to be provided and understanding what these do exactly .
+
+When using a command , unless otherwise specified , it will perform its default behaviour . For example , ( ls ) lists the content of the working directory . However , hidden files are not shown . We can use flags and switch to extend the behaviour of commands .
+
+Using our ( ls ) example. ( ls ) informs us that there is only one folder named “ folder1 “ as highlighted in the screenshot below. 
+
+However, after using the ( -a ) argument ( short for - - all ), we know suddenly have an output with a few more files and folders such as “ . hiddenfolder “ . Files and folders with “.” Are hidden files .. 
+
+
+Commands that accept these will also have a ( - - help ) option . This option will list the possible options that the command accepts , provide a brief description and example of hovw to use it .. 
+
+
+This option is , in fact , a formatted output of what is called the man page ( short for manual ) , which contains  documentation for Linux commands and applications . 
+
+THE MAN(UAL) PAGE :
+The manual pages are a great source of information for both system commands and applications available on both a linux machine , which is accessible on the machine itself. 
+
+To access this documentation , we can use the ( man ) command and then provide the command we want to read the documentation for . Using our ( ls ) example , we would use ( man ls ) to view the manual pages for ( ls ) like so
+
+
+
+We covered some of the most fundamental commands when interacting with the filesystem on the linux machine . For example , we covered how to list and find the contents of folders using ( ls ) and 
+( find ) and navigating the filesystem using ( cd ) . 
+
+In this task , we are going to learn some more commands for interacting with the filesystem to allow us to :
+Create files and folders 
+Move files and folders
+Delete files and folders 
+
+
+Creating Files and Folders ( touch , mkdir ) 
+Creating files and folders on Linux is a simple process . First , we will cover creating a file . The touch command takes exactly one argument – the name we want to give the file we create . For example , we can create the file “ note “ by using touch note. It’s worth noting that touch simply creates a black file . You would need to use commands like echo or text editors such as nano to add content to the black file. 
+
+
+
+
+
+
+
+This is a similar process for making a folder , which just involves using the mkdir command and again providing the name that we want to assign to the directory . For example , create the directory “ my directory “ using mkdir void “
+
+
+
+Removing Files and Folders ( rm ) 
+ ( rm ) is extraordinary out of the commands that we have covered so far . You can simply remove files by using ( rm ) . However , you nedd to provide the ( -R ) switch alongside the name of the directory you wish to remove ..
+
+
+
+
+
+Copying and Moving Files and Folders ( cp , mv ) 
+Copying and moving files is an important fuctionality on a Linux machine . Starting with ( cp ) this command takes two arguments .. 
+The name of the existing file 
+The name we wish to assign to the new file when copying 
+( cp ) copies the entire contents of the existing file into the new file . 
+
+
+
+Moving a file takes two arguments , just like the cp command . However rather than copying and/or creating a new file . ( mv ) will merge or modify the second files that we provide as an argument . Not only can use ( mv ) to move a file to a new folder , but you can also ( mv ) to rename the files or folder . 
+
+cl
+
+Determining File Type :
+What is often misleading and often catches people out is making presumptions from files as to what their purpose or contents may be . Files usually have whats known as a extension to make this easier . For example , text files usually have an extension to make this easier . For example , text files usually have a n extension of “ . txt “ . But this is not necessary . 
+
+So far , the files we have used in our examples have haven’t had an extension . Without knowing the context of why the files is there - - we don’t really know its purpose . Enter the file command . The command takes one arguments . 
+
+
+
+
+
+
+
+
+
+As you would have already found out by now , certain users cannot access certain files or folders . We have previously some commands that can be used to determine what access we have and where it leads us .. 
+
+In our previous tasks, we learned how to extend the use of commands through flags and switches . Take , for example , the ( ls ) command which lists the contents of the currnt directory . When using the ( - l ) switch .. ls 
+
+
+Although initimidating , these three columns are very important in determining certain charecteristics of a file or folder and wether or not we have access to it . A file or folder can we have a couple of charecteristics that determine both what it is that and who we can do with it as such as the following 
+Read 
+Write 
+Execute 
+The diagram below is a great representation of how these permissions can be translated . 
+
+
+
+Lets use the “ myfirstipscan.txt” file in our intial screenshot at the top of this task . It has the “ – “ indicator highlighting that it is a file and then “ rw” followed after. This means that owner of the file can read and write to that file .. but cannot execute it . 
+
+BREFIELY : THE DIFFERENCE BETWEEN USERS & GROUPS 
+
+We briefly explored this in Linux fundamentals part 1 ( namely , the differences between a regular user and a system user ) . The great thing about Linux is that permissions can be so granular , that whilist a user technically owns a file .. If the permission have been set , then a group of users can also have wither the same or different set of permissions to the exact same file without affecting the file owner itself .. 
+
+Lets put this inot a real world context : the system user that runs a web server must have permissions to read and write files for an effective web application. However , companies such as web hosting companies will have to want to allow their customers to upload their own files for their website without being the webserver user  -- compromising the security of every other customer . 
+
+We will learn the commands necessary to switch between users below  . . 
+
+Switching Between Uers :
+Switching between users on a linux install is easy work thans to the ( su ) command . Unless you are the root user ( or using root permissions through sudo ) , then you are required to know two things to facilitate this tranissition of ur accounts : 
+The user we wish to switch to 
+The user password
+The ( su ) command takes a couple of switches that may be of relevance to you . For example , executing a command once you log in or specying a specific shell to use . I encourage you to read the man pages for ( su ) to find out more . However , I will cover the ( - l ) or ( -- login ) switch ..
+
+Simply by providing the ( - l ) switch to ( su ) we start a shell that is much more similar to the actual user logging into the system . – we inherit a lot more properties of the new user , I .e environment variables and the likes .. 
+
+For example , when using ( su ) to switch to “user2” , our new session drops us into our previous user home directory .. 
+
+
+Where now , after using ( - l ) our new session has dropped us into the hom directory of “ user “ automatically . 
+
+COMMON DIRECTORIES 
+
+/etc :
+This root directory is one of the most important root directories on your system . The etc folder ( short for etcetera ) is a commonplace location to store system files that are used by your operating system . 
+For example , the sudoers file highlightened in the screenshot below contains a list of the users and groups that have permission to run sudo or a set of commands as the root user . 
+Also hightlightened below are the “passwd” and “shadow” files . These two files are special for Linux as they show how your system stores the passwords for each user in encrypted formatting called SHA – 512 
+( SHA-512 is a cryptographic hash function that produces a 512-bit (64-byte) hash value from any input data ) 
+
+
+/var :
+
+The “/var” directory with “ var “ being short for variable data , is one of the main root folders found on a linux install . This folder stores data that is frequently accessed or written by services or ls
+applications running on the system . For example , Log files from running services and applications are written here ( /var/log ) or other data that is not necessarily associated with a specific user ( I.e ., databases and the like ) . 
+
+
+/root :
+Unlike the /home directory | , the /root folder is actually the home for the “root” system user . There isn’t anything more to the folder other that just understanding that this is the home directory for the “ root “ user . But , it is worth mention as the logical presumption is that this user would have their data in a directory such as  “ / home/ root “ by default . 
+
+( TO QUICKLY MOVE FROM ONE DIRECTORY TO ANOTHER DIRECTORY  [ cd / ( the directory name ) ]
+ 
+
+
+Cd /tmp : 
+This is a unique root directory found on a Linux install . Short for “ temporary “ , the /tmp directory is volatile and is used to store data that is only needed to be accessed once or twice . Similar to the memory on your computer , once the computer is restarted , the contents of this folder are cleared out . 
+
+What’s useful for us in pentesting is that any user can write to this folder by default . Meaning once we have to access to a machine , it serves as a good place to store things like our enumeration scripts . 
+
+
+
+WHAT WE HAVE LEARNED TILL NOW : 
+To quickly recap , this room taught you ; 
+
+How to connect to a linux machine remotely using SSH 
+Advancing your use of commands by providing flags , switches and where you can go to learn about these for each command ( man pages ) 
+Some more commands that you will frequently be using to interact with the file system and its contents 
+A brief introduction to file permissions and switching users 
+A summary paragraph for the important root directories in KALI LINUX install and how we may be able to use the data stored within these .. 
+
+
+TERMINAL TEXT EDITORS 
+
+Throughout the series so far , we have only stored text in files using a combination of the 
+[ echo ] command and the pipe operators ( > and >> ) . 
+
+This isn’t an efficient way to handle data when your working with files with multiple lines and the sorts .. 
+
+INTRODUCING TERMINAL TEXT EDITORS 
+
+There are a few options that you can use , all with a variety of friendliness and utility . This task is going to introduce you to [ nano ] but also show you an alternative named VIM .. 
+
+Nano :
+
+It is easy to get started with Nano! , To create or edit a file using nano , we simply use 
+[ nano filename ] – replacing “ filename” with the name of the file you wish to edit .. 
+
+ 
+
+Once we press enter to execute the command  [ nano ] will launch ! Where we can just begin to start entering or modifying our text . You can navigate each line using the “up” and “down” arrow keys or start a new line using the “ Enter “ key on your keyboard .. 
+
+
+
+
+
+Nano has a few features that are easy to remember & covers the most general things you would out of a text editor , including :
+
+Searching for text 
+Copying and pasting 
+Jumping to a line number
+Finding out what line number you are on 
+You can use these features of nano by pressing the “ Ctrl” key ( which is represented as an [ ^ ] on Linux ) and a corresponding letter . For example , to exit , we would want to press “ Ctrl “ and “X” to exit Nano .
+
+GENERAL / USEFUL UTILITIES 
+DOWNLOADING 
+
+A pretty fundamental feature of computing is the abilty to transfer fles . For example , you may want to download a program , a script ,or even a picture . Thankfully for us , there are multiple ways in which we can retrieve these files .. 
+
+We are going to cover the use of [ wget ] . This command allows us to download files from the web via HTTP – as if you were accessing the file in your browser , We simply need to provide the address of the resource that we wish to download . For example , if I wanted to download a file named “ myfile.txt” onto my machine , assuming I knew the web address it – it would look something like this :
+
+
+TRANSFERRING FILES FROM YOUR HOST – SCP ( SSH )
+Secure copy , or SCP is just means pf securely copying files . Unlike the regular cp command , this command allows you to transfer files between two computers using the SSH protocol to provide bothe authentication and encryption. 
+
+Working on a model of SOURCE and DESTINATION , SCP allows you to :
+Copy files and directories from your current system to a remote system
+Copy files and directories from a remote system to your current  system 
+Provided that we know usernames and passwords for a user on your current system and a user on the remote system . For example , lets copy an example file from our machine to a remote machine , which I have neatly laid out in the table below : 
+
+
+
+SERVING FILES FROM YOUR HOST – WEB 
+Ubuntu machines come pre – packaged with python3. Python helpfully provides a lightweight and easy-to-use module called “ HTTPServer”. This module turn your computer into a quick and easy web server that you can use to serve your own files , where they can then be downloaded by another computing using commands such as [ curl ] and [ wget ] ..
+
+Python3’s “ HTTPServer “ will serve the files in the directory that you run the command , but this can be changed by providing options that can be found in the manual pages . Simply , all we need to do is run .
+[ python3 -m http . server ] to start the module ! In the screen short below , we are serving from a directory called “ webserver “ , which has a single names “file” . 
+
+Now let’s use [ wget ] to download the file using the computer’s IP address and the name of the file . One flaw wit this module is that you have no way of indexing . so you must know the exact name and location of the file that you sih to use . This why I prefer to use Updog .. What’s Updog ?
+A more advanced yet lightweight webserver. But for now , let’s stick to using Python’s “ HTTP Server “ .
+
+
+
+
+
+
+
+WINDOWS FUNDAMENTALS 1 
+The Windows operating system has a long history dating back to 1985, and currently,  it is the dominant operating system in both home use and corporate networks. Because of this, Windows has always been targeted by hackers & malware writers.
+Windows XP was a popular version of Windows and had a long-running. Microsoft announced Windows Vista , which was a complete overhaul of the Windows operating system. There were many issues with Windows Vista. It wasn't received well by Windows users, and it was quickly phased out.
+When Microsoft announced the end-of-life date for Windows XP, many customers panicked. Corporations, hospitals, etc., scrambled and tested the next viable Windows  version , which was Windows 7, against many other hardware and devices. Vendors had to work against the clock to ensure their products worked with Windows 7 for their customers. If they couldn't, their customers had to break their agreement and find another vendor that upgraded their products to work with Windows 7. It was a nightmare for many, and Microsoft took note of it.
+Windows 7, as quickly as it was released soon after, was marked with an end of support date.  Windows 8.x came and left and it was short-lived, like Vista.
+Then arrived Windows 10 followed by Windows 11, which is the current Windows operating system version for desktop computers.
+Windows 11 comes in 2 flavors, Home and Pro. You can read the difference between the Home and Pro here.
+Even though we didn’t talk about servers, the current version of the Windows operating system for servers is Windows Server 2025.
+Many critics like to bash on Microsoft, but they have made long strides to improve the usability and security with each new version of Windows .
+Note : The Windows edition for the attached VM is Windows Server 2019 Standard, as seen in   System Information .
+Update : As of June 2021, Microsoft announced the retirement dates for Windows 10 here . 
+" Microsoft will continue to support at least one Windows 10 Semi-Annual Channel until October 14, 2025 ".
+As of October 5th, 2021 - Windows 11 now is the current Windows operating system for end-users. Read more about Windows 11 here .  
+
+
+Traditionally, you need to pass the login screen first. The login screen is where you need to enter valid account credentials; usually, a username & password of a preexisting Windows account on that particular system or in the Active Directory environment (if it's a domain-joined machine). 
+
+THE DESKTOP ( G U I )
+The Windows Desktop, aka the graphical user interface or GUI in short, is the screen that welcomes you once you log into a Windows 10 machine.
+
+
+The above screenshot is an example of a typical Windows Desktop. Each component that makes up the GUI is explained briefly below.
+The Desktop
+Start Menu
+Search Box (Cortana)
+Task View
+Taskbar
+Toolbars
+Notification Area
+The Desktop
+The desktop is where you will have shortcuts to programs, folders, files, etc. These icons will either be well organized in folders sorted alphabetically or scattered randomly with no specific organization on the desktop. In either case, these items are typically placed on the desktop for quick access.
+The look and feel of the desktop can be changed to suit your liking. By right-clicking anywhere on the desktop, a context menu will appear. This menu will allow you to change the sizes of the desktop icons, specify how you want to arrange them, copy/paste items to the desktop, and create new items, such as a folder, shortcut, or text document.
+      
+Under Display settings , you can make changes to the screen's resolution and orientation. In case you have multiple computer screens, you can make configurations to the multi-screen setup here.
+
+You can also change the wallpaper by selecting Personalize .
+Under Personalize, you can change the background image to the Desktop, change fonts, themes, color scheme, etc. 
+
+The Start Menu
+In previous versions of Windows, the word Start was visible at the bottom left corner of the desktop GUI. In modern versions of Windows, such as Windows 10, the word 'Start' doesn't appear anymore, but rather a Windows Logo is shown instead. Even though the look of the Start Menu has changed, its overall purpose is the same. 
+The Start Menu provides access to all the apps/programs, files, utility tools, etc., that are most useful. 
+Clicking on the Windows logo, the Start Menu will open. The Start Menu is broken up into sections. See below.
+
+1. This section of the Start Menu provides quick shortcuts to actions that you can perform with your account or login session, such as making changes to your user account, lock your screen, or signing out of your account. Other shortcuts specific to your account are your Documents (document icon) folder and Pictures folder (pictures icon). Lastly, the gear/cog icon will take you to the Settings screen, and the power icon will allow you to Disconnect from a Remote Desktop session, shut down the computer, or restart the computer.
+In the below image, you can see what each of the icons represents. To expand this section, click on the icon that resembles a hamburger at the top.  
+
+2.This section will show all Recently added apps/programs at the top and all the installed apps/programs (that are configured to appear in the Start Menu). In this section, you'll also see the apps/programs will be listed in alphabetical order. Each letter will have its own section. See below.
+
+In the above image, the first box is where the recently added apps/programs will appear. The second box is where all the installed apps/programs will appear. 
+Note : In your VM, Google Chrome will not show up as a Recently Added program anymore.
+If you have a LONG list of installed apps/programs, you can jump to a particular section in the list by clicking on the letter headings to launch an alphabet grid. See below.
+
+
+3. The right side of the Start Menu is where you will find icons for specific apps/programs or utilities. These icons are known as tiles . Some tiles are added to this section by default. If you right-click any of the tiles, you guessed it; a menu will appear to allow you to perform more actions on the selected tile; such as resizing the tile, unpinning from Start Menu, view its Properties, etc. See below.
+   Apps/programs can be added to this Start Menu section by right-clicking the app/program and selecting Pin to Start. See below.
+
+
+The Taskbar
+Some of the components are enabled and visible by default. The Toolbar (6), for example, was enabled for demonstration purposes.  
+If you're like me and want to disable some of these components, you can right-click on Taskbar to bring up a context menu that will allow you to make changes.
+ Any apps/programs, folders, files, etc., that you open/start will appear in the taskbar. 
+
+Hovering over the icon will provide a preview thumbnail, along with a tooltip. This  tooltip is handy if you have many apps/programs open, such as Google Chrome, and you wish to find which instance of Google Chrome is the one you need to bring in to focus. 
+When you close any of these items, they will disappear from the taskbar (unless you explicitly pinned it to the taskbar). 
+The Notification Area
+The Notification Area, which is typically located at the bottom right of the Windows screen, is where the date and time are displayed. Other icons possibly visible in this area is the volume icon, network/wireless icon, to name a few. Icons can be either added or removed from the Notification Area in Taskbar settings. 
+
+
+From there, scroll down to the Notification Area section to make changes. 
+
+
+
+Here are Microsoft's brief documents for the Start Menu and   Notification Area .
+Tip : You can right-click any folder, file, app/program, or icon to  view more information or perform other actions on the clicked item. 
+
+
+
+
+
+
+
+
+
+
+
+THE FILE SYSYTEM 
+
+The file system used in modern versions of  Windows  is the New Technology File System or simply  NTFS .
+Before NTFS, there was  FAT16/FAT32 (File Allocation Table) and HPFS (High Performance File System). 
+You still see FAT partitions in use today. For example, you typically see FAT partitions in USB devices, MicroSD cards, etc.  but traditionally not on personal Windows computers/laptops or Windows servers.
+NTFS is known as a journaling file system. In case of a failure, the file system can automatically repair the folders/files on disk using information stored in a log file. This function is not possible with FAT.   
+NTFS addresses many of the limitations of the previous file systems; such as: 
+Supports files larger than 4GB
+Set specific permissions on folders and files
+Folder and file compression
+Encryption ( Encryption File System or EFS )
+If you're running Windows, what is the file system your Windows installation is using? You can check the Properties (right-click) of the drive your operating system is installed on, typically the C drive (C:\).
+
+You can read Microsoft's official documentation on FAT, HPFS, and NTFS here . 
+Let's speak briefly on some features that are specific to NTFS. 
+On NTFS volumes, you can set permissions that grant or deny access to files and folders.
+The permissions are:
+Full control
+Modify
+Read & Execute
+List folder contents
+Read
+Write
+The below image lists the meaning of each permission on how it applies to a file and a folder. (credit  Microsoft )
+
+
+How can you view the permissions for a file or folder?
+Right-click the file or folder you want to check for permissions.
+From the context menu, select Properties .
+Within Properties, click on the Security tab.
+In the Group or user names list, select the user, computer, or group whose permissions you want to view.
+In the below image, you can see the permissions for the Users group for the Windows folder. 
+
+
+Refer to the Microsoft documentation to get a better understanding of the NTFS permissions for  Special Permissions .
+Another feature of NTFS is Alternate Data Streams ( ADS ).
+Alternate Data Streams  (ADS) is a file attribute specific to Windows  NTFS  (New Technology File System).
+Every file has at least one data stream ( $DATA ), and ADS allows files to contain more than one stream of data. Natively Window Explorer doesn't display ADS to the user. There are 3rd party executables that can be used to view this data, but Powershell gives you the ability to view ADS for files.
+From a security perspective, malware writers have used ADS to hide data.
+Not all its uses are malicious. For example, when you download a file from the Internet, there are identifiers written to ADS to identify that the file was downloaded from the Internet.
+To learn more about ADS, refer to the following link from MalwareBytes here . 
+Bonus : If you wish to interact hands-on with ADS, I suggest exploring Day 21 of  Advent of Cyber 2 .
+
+
+
+FOR EASY UNDERSTANDING ( MY NIKA EXPLAINATION )
+
+1. File Systems (Think of it like a library system 📚)
+A file system is how your computer organizes and stores files on the hard drive.
+Without a file system, your computer wouldn’t know where one file ends and the next one starts.
+👉 Old systems: FAT16, FAT32, HPFS
+👉 Modern Windows: NTFS (New Technology File System)
+
+2. Why NTFS is Better than FAT
+FAT is like a basic notebook – you can write things, but it has limits.
+NTFS is like a smart digital library – more powerful, secure, and flexible.
+Here’s why NTFS is better:
+Can handle big files (more than 4GB, unlike FAT32).
+Can set permissions (decide who can open/edit/delete a file).
+Can compress files/folders to save space.
+Can encrypt files (lock them with a key).
+Has journaling (keeps a log to fix problems if the computer crashes).
+
+3. NTFS Permissions 🔒
+Permissions = rules for who can do what with a file/folder.
+Types of permissions:
+Full Control → do anything (open, edit, delete, change permissions).
+Modify → read + edit + delete.
+Read & Execute → open and run files.
+List Folder Contents → see what’s inside a folder.
+Read → only look, can’t change.
+Write → add new things or change content.
+👉 Example:
+Your teacher gives you “Read Only” access → you can see notes but not edit them.
+If you had “Full Control” → you could edit, delete, or lock the notes.
+How to check permissions in Windows:
+Right-click file/folder → Properties.
+Click Security tab.
+Select a user → see what permissions they have.
+
+4. Alternate Data Streams (ADS) 🌀
+This is an extra hidden space inside a file.
+Normally, a file has one main content stream (like the text in a Word file).
+With ADS, you can hide extra data inside that same file, but Explorer won’t show it.
+👉 Example:
+Imagine a book 📖.
+The visible text is the file itself.
+ADS is like writing secret notes in invisible ink in the margins — still part of the book, but hidden from normal readers.
+Uses:
+Good use → Windows tags downloaded files with info (“This file came from the Internet”).
+Bad use → Hackers can hide malware inside ADS so you don’t see it.
+You can check ADS using PowerShell or special tools (since File Explorer won’t show it).
+
+5. Quick Summary 🚀
+FAT = old & simple. NTFS = new & powerful.
+NTFS lets you:
+✅ Store big files
+✅ Control who can open/edit files (permissions)
+✅ Compress/encrypt data
+✅ Automatically repair after crashes (journaling)
+✅ Hide extra info in files (ADS)
+
+
+
+
+
+
+Perfect 🔥 Let’s go step by step so you can actually use NTFS and play with ADS on your Windows PC.
+
+🖥️ Part 1: Using NTFS (Basics)
+Most likely your C:\ drive is already NTFS (since modern Windows installs use it).
+But here’s how you check:
+Open File Explorer.
+Right-click on your C:\ drive → choose Properties.
+In the General tab, look for File system: NTFS.
+
+Now, NTFS gives you special features. Let’s try one:
+Example: Setting Permissions
+Create a new folder → right-click → Properties → Security tab.
+Click Edit → choose a user (e.g., your account or "Users").
+Check or uncheck permissions like Read, Write, Full Control.
+👉 Now log into another user account (if you have one) and test — they won’t be able to open or change files if you denied permissions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+THE WINDOWS \ SYSTEM32 FOLDERS 
+The Windows folder ( C:\Windows ) is traditionally known as the folder which contains the Windows operating system. 
+The folder doesn't have to reside in the C drive necessarily. It can reside in any other drive and technically can reside in a different folder.
+This is where environment variables, more specifically system environment variables, come into play.  Even though not discussed yet, the system  environment variable for the Windows directory is %windir% .
+Per Microsoft , " Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders ".
+There are many folders within the 'Windows' folder. See below.
+
+One of the many folders is System32 .
+
+
+
+
+
+
+
+The System32 folder holds the important files that are critical for the operating system.
+You should proceed with extreme caution when interacting with this folder. Accidentally deleting any files or folders within System32 can render the Windows OS inoperational. Read more about this action here .
+Note : Many of the tools that will be covered in the Windows Fundamentals series reside within the System32 folder. 
+
+USER ACCOUNTS , PROFILES AND PERMISSIONS 
+User accounts can be one of two types on a typical local Windows system: Administrator & Standard User. 
+The user account type will determine what actions the user can perform on that specific Windows system. 
+An Administrator can make changes to the system: add users, delete users, modify groups, modify settings on the system, etc. 
+A Standard User can only make changes to folders/files attributed to the user & can't perform system-level changes, such as install programs.
+You are currently logged in as an Administrator. There are several ways to determine which user accounts exist on the system. 
+One way is to click the Start Menu and type Other User. A shortcut to System Settings > Other users should appear. 
+
+If you click on it, a Settings window should now appear. See below.
+Since you're the Administrator, you see an option to Add someone else to this PC.
+Note: A Standard User will not see this option.  
+Click on the local user account. More options should appear: Change account type and Remove. 
+Click on Change account type. The value in the drop-down box (or the highlighted value if you click the drop-down) is the current account type. 
+When a user account is created, a profile is created for the user. The location for each user profile folder will fall under is C:\Users.
+For example, the user profile folder for the user account Max will be C:\Users\Max.
+The creation of the user's profile is done upon initial login. When a new user account logs in to a local system for the first time, they'll see several messages on the login screen. One of the messages, User Profile Service, sits on the login screen for a while, which is at work creating the user profile. See below.
+Once logged in, the user will see a dialog box similar to the one below (again), indicating that the profile is in creation.
+
+
+
+
+
+
+Each user profile will have the same folders; a few of them are:
+Desktop
+Documents
+Downloads
+Music
+Pictures
+Another way to access this information, and then some, is using Local User and Group Management. 
+Right-click on the Start Menu and click Run. Type lusrmgr.msc. See below
+
+Note: The Run Dialog Box allows us to open items quickly. 
+Back to lusrmgr, you should see two folders: Users and Groups. 
+If you click on Groups, you see all the names of the local groups along with a brief description for each group. 
+Each group has permissions set to it, and users are assigned/added to groups by the Administrator. When a user is assigned to a group, the user inherits the permissions of that group. A user can be assigned to multiple groups.
+Note: If you click on Add someone else to this PC from Other users, it will open Local Users and Management. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+USER ACCOUNT CONTROL 
+Alright Jon ⚡ let’s simplify this whole UAC (User Account Control) concept into easy words so you fully get it:
+
+🔑 The Problem
+Most home users run as Administrator (means: full power to install, delete, or change the system).
+If malware infects you while you’re logged in as Administrator → it can also run as admin and damage your whole system.
+
+🛡️ The Solution: UAC (User Account Control)
+Microsoft made UAC to protect you.
+Here’s how it works:
+Even if you’re an administrator, when you log in → Windows doesn’t give you full power immediately.
+👉 You’re running in standard user mode most of the time.
+When a program wants to do something risky (like installing software, changing system settings, or modifying files in C:\Windows),
+Windows stops and asks you:
+“Do you really want to allow this?”
+That’s the UAC prompt (the pop-up with the shield icon).
+
+🔵 Example
+You’re logged in as Admin.
+You double-click an installer (setup.exe).
+A shield icon on the installer means: “This action needs Admin rights.”
+Windows pops up UAC prompt:
+If you’re an Admin → just click Yes (or enter your password if required).
+If you’re a Standard User → you must enter the Admin password to continue.
+If no password is entered → the install is canceled.
+
+
+
+⚠️ Important Notes
+UAC does not apply to the built-in Administrator account (the hidden, god-level account). That account always runs with full rights.
+UAC makes malware attacks harder because the program cannot silently install itself without triggering a visible prompt.
+
+🧠 Think of UAC Like This:
+Your account is like a car with turbo mode.
+Normally you drive in eco mode (standard user rights).
+If you want turbo → you must confirm by pressing a special button (UAC prompt).
+Malware can’t secretly press the turbo button unless you allow it.
+
+👉 So in short:
+UAC = a security gate that asks for your permission before letting apps use administrator powers.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+SETTINGS AND THE CONTROL THE PANEL 
+On a Windows sysem , the primary locations to make changes are the settings menu and the control panel . 
+
+For a long time , the Control Panel has been the go-to location to make system changes , msuch as adding a printer , uninstall a program , etc..
+The setting menu was introduced in Windows 8 , the first windows operating system catered to touch screen tablets , and is still available in Windows 10 . As a matter of fact , the Settings menu is now the primary location a user goes to if they are looking to change the system ..
+
+There are similarities and difference between the two menus . Below are screenshots of each . 
+SETTINGS :
+
+
+CONTROL PANEL :
+
+Note : The icons for settings might be different in the version of windows on your personal device .
+Both can be accessed from the Start Menu. See below.
+
+Control Panel is the menu where you will access more complex settings and perform more complex actions . In some cases , you can start in Settings and end up in the Control Panel .
+For example , in Settings , click on the Network & Internet . From here , click on the change adapter options ..
+
+Notice that the next window that pops up is from the Control Panel .
+
+If you’re unclear which to open if you wish to change a setting , use the start menu and search for it ..
+In the example below , the search was “ wallpaper “ . Notice that few results were returned ..
+
+
+
+If we click on the Best match ,  window to the settings menu appears to make changes to the wallpaper.
+
+
+TASK MANAGER :
+The last subject that will be touched on in this module is the Task Manager .. 
+The Task manager provides information about the applications and process currently running on the system .. Other information is also available , such as how much CPU and RAM are being utilized , which falls under Performance .. 
+
+
+
+Task Manager will open in Simple View and won’t show much information ..
+
+Click on More details , and the view changes 
+
+
+
+
